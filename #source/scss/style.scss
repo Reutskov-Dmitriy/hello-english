@@ -1,2 +1,67 @@
 @import "reset";
 @import "fonts";
+@import "vars";
+
+body {
+	font-family: $ff-os;
+}
+
+// HEADER
+
+.header {
+	position: fixed;
+	min-width: 100%;
+	height: 100px;
+	background-color: $sky;
+}
+.header-menu {
+	&__logo {
+	}
+
+	&__checkbox {
+	}
+
+	&__btn {
+	}
+
+	&__icon {
+	}
+
+	&__container {
+		position: absolute;
+		top: 400px;
+		left: 10%;
+		right: 10%;
+		height: 300px;
+		background-color: $sky;
+	}
+
+	&__items {
+		width: 100%;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		gap: 4vh;
+		line-height: 1.25rem;
+	}
+
+	&__item {
+	}
+
+	&__link {
+		color: $white;
+	}
+}
+.logo {
+	&__title {
+		font-family: $ff-mon;
+		color: $white;
+		& a {
+			color: $white;
+		}
+	}
+
+	&__title--size {
+		font-size: 2rem;
+	}
+}
