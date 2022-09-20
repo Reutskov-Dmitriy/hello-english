@@ -4,12 +4,22 @@
 
 body {
 	font-family: $ff-os;
+	color: $black;
+}
+.container {
+	min-width: 280px;
+	height: 100%;
+	padding: 3vw;
+}
+a {
+	color: $darkGrey;
 }
 
 // HEADER
 
 .header {
-	position: fixed;
+	position: relative;
+
 	min-width: 100%;
 	height: 80px;
 	background-color: $sky;
@@ -61,7 +71,7 @@ body {
 		display: block;
 		position: absolute;
 		top: 30px;
-		right: 2vw;
+		right: 3vw;
 
 		z-index: 99;
 		width: 30px;
@@ -104,7 +114,7 @@ body {
 
 	&__container {
 		position: absolute;
-		top: -400px;
+		top: -380px;
 		left: 10%;
 		right: 10%;
 		height: 300px;
@@ -115,6 +125,7 @@ body {
 	&__items {
 		width: 100%;
 		height: 100%;
+		margin-top: 5vh;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
@@ -143,12 +154,136 @@ body {
 		& a {
 			width: 100%;
 			height: 100%;
-
 			color: $white;
 		}
 	}
 
 	&__title--size {
-		font-size: 1.5rem;
+		font-size: 1.3rem;
+	}
+}
+
+// MAIN
+// SECTION LEVELS
+main {
+	height: 100%;
+	width: 100%;
+}
+
+.levels {
+	display: flex;
+	flex-direction: column;
+	gap: 5vw;
+
+	&_description {
+	}
+
+	&__info {
+	}
+
+	&__title {
+	}
+
+	&__toggle {
+	}
+}
+
+.toggle {
+	display: flex;
+	font-size: 1rem;
+
+	& div {
+		flex: 0 1 33.3%;
+		width: 25.5vw;
+		height: 30px;
+		text-align: center;
+		border-radius: 10px;
+
+		& a {
+			&:hover,
+			&:active,
+			&:focus {
+				background-color: $sky;
+				color: $white;
+			}
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 100%;
+			height: 100%;
+			font-family: $ff-ssp;
+			transition: 1s;
+			border-radius: 10px;
+			border: 1px solid $sky;
+		}
+	}
+	&__beginer {
+	}
+
+	&__intermediate {
+		pointer-events: none;
+		background-color: $lightGray;
+		& a {
+			color: $lightGray;
+		}
+	}
+
+	&__advanced {
+		pointer-events: none;
+		background-color: $lightGray;
+		& a {
+			color: $lightGray;
+		}
+	}
+}
+
+.cards-list {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-auto-rows: max-content;
+	grid-gap: 7vw;
+}
+.card {
+	padding: 2vh;
+	width: 100%;
+	height: 100%;
+	border: 1px solid $sky;
+	border-radius: 10px;
+	transition: 0.5s;
+	&:hover {
+		box-shadow: 0 0 15px $salat;
+	}
+	&_icon {
+		width: 80px;
+		height: 80px;
+		& img {
+			width: auto;
+			height: auto;
+		}
+	}
+
+	&__link {
+		width: 100%;
+		height: 100%;
+
+		display: block;
+	}
+
+	&__items {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&__text {
+		text-align: center;
+	}
+
+	&__title {
+	}
+
+	&__description {
+		margin-top: 1vh;
 	}
 }

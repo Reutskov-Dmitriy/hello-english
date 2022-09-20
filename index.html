@@ -34,23 +34,85 @@
 	</header>
 
 	<main>
-		<section class="level">
-			<div class="level__info">
-				<h2 class="level__title"></h2>
-				<p class="level_description"></p>
-			</div>
-			<div class="level__togles">
-				<div class="level__togle">
-					<a href="#">Beginner</a>
+		<div class="container">
+			<section class="levels">
+				<div class="levels__info">
+					<h2 class="levels__title">Выбирите уровень и задания для практики </h2>
+					<p class="levels_description"></p>
 				</div>
-				<div class="level__togle">
-					<a href="#">Intermediate</a>
+				<div class="levels__toggle toggle">
+					<div class="toggle__beginer">
+						<a href="#beginer-task">Beginner</a>
+					</div>
+					<div class="toggle__intermediate">
+						<a href="">Intermediate</a>
+					</div>
+					<div class="toggle__advanced">
+						<a href="#">Advanced</a>
+					</div>
 				</div>
-				<div class="level__togle">
-					<a href="#">Advanced</a>
-				</div>
-			</div>
-		</section>
+
+				<ul id="beginer-task" class="cards-list">
+					<li class="card">
+						<a href="#" class="card__link">
+							<div class="card__items">
+								<figure class="card_icon">
+									<img src="assets/images/icons/time/past-time-64.png" alt="Past Simple">
+								</figure>
+								<div class="card__text">
+									<h3 class="card__title">Past Simple</h3>
+									<p class="card__description">Простое прошедшее</p>
+								</div>
+							</div>
+						</a>
+					</li>
+
+					<li class="card">
+						<a href="#" class="card__link">
+							<div class="card__items">
+								<figure class="card_icon">
+									<img src="assets/images/icons/time/present-time-64.png" alt="Present Simple">
+								</figure>
+								<div class="card__text">
+									<h3 class="card__title">Present Simple</h3>
+									<p class="card__description">Простое настоящее</p>
+								</div>
+							</div>
+						</a>
+					</li>
+
+					<li class="card">
+						<a href="#" class="card__link">
+							<div class="card__items">
+								<figure class="card_icon">
+									<img src="assets/images/icons/time/future-time-64.png" alt="Future Simple">
+								</figure>
+								<div class="card__text">
+									<h3 class="card__title">Future Simple</h3>
+									<p class="card__description">Простое будущее</p>
+								</div>
+							</div>
+						</a>
+					</li>
+
+					<li class="card">
+						<a href="#" class="card__link">
+							<div class="card__items">
+								<figure class="card_icon">
+									<img src="assets/images/icons/time/past-time-64.png" alt="Past Simple">
+								</figure>
+								<div class="card__text">
+									<h3 class="card__title">Past Simple</h3>
+									<p class="card__description">Простое прошедшее</p>
+								</div>
+							</div>
+						</a>
+					</li>
+
+				</ul>
+			</section>
+
+		</div>
 	</main>
 
 </body>
