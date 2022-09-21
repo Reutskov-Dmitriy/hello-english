@@ -1,0 +1,23 @@
+.btn {
+	transition: 1s;
+	border: 1px solid $sky;
+	border-radius: 10px;
+	color: $white;
+
+	b &:hover,
+	&:active,
+	&:focus {
+		color: $white;
+		background-color: $blue;
+	}
+}
+
+#inactive1,
+#inactive2 {
+	pointer-events: none;
+	background-color: $lightGray;
+}
+#active {
+	pointer-events: all;
+	background-color: $sky;
+}

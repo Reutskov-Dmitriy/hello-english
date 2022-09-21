@@ -1,0 +1,22 @@
+.card__description--align {
+  margin-top: 3vh;
+}
+.form-verb {
+  font-size: 1rem;
+  line-height: 2rem;
+}
+.form-verb__answer {
+  display: inline-block;
+  outline: none;
+  height: 30px;
+  width: 100px;
+  border: 1px solid #55b7ff;
+  border-radius: 10px;
+  padding: 5px;
+}
+.form-verb__btn {
+  margin-top: 5vh;
+  display: block;
+  height: 24px;
+  width: 100px;
+}/*# sourceMappingURL=verb-to-be.css.map */
