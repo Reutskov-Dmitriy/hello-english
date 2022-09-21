@@ -28,13 +28,21 @@ function findElement(event) {
 
 
 function checkVerbForm() {
-	if (attributeData.includes(inputAnswer.value.toLowerCase().trim())) {
+	if (checkInputs() && attributeData.includes(inputAnswer.value.toLowerCase().trim())) {
 		parentInput.style.backgroundColor = 'rgb(143, 250, 166, 0.5)';
-	} else {
+	}
+	else if (attributeData.includes(inputAnswer.value.toLowerCase().trim())) {
+		parentInput.style.backgroundColor = 'rgb(143, 250, 166, 0.5)';
+	}
+	else {
 		parentInput.style.backgroundColor = 'rgb(253, 9, 9, 0.5)';
 		btnCheck.setAttribute('id', 'inactive1');
 		inputAnswer.setAttribute('id', 'inactive2');
 	}
 }
 
-function check
+function checkInputs() {
+	if (inputAnswerPrevious != undefined || inputAnswerNext != undefined) {
+		return true
+	}
+}
