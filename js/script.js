@@ -42,15 +42,15 @@ function confirmKeyEnter(event) {
 
 function checkVerbForm() {
 	let checkBoolean = false;
-	console.log(inputArr);
 
 	for (let i = 0; i < inputArr.length; i++) {
 		let inActive = inputArr[i].getAttribute('data-verb').includes(inputArr[i].value.toLowerCase().trim());
+		console.log(inActive);
 
-		if (inActive) {
+		if (inActive && inputArr[i].value !== '') {
 			checkBoolean = true;
 			inputArr[i].setAttribute('id', 'inactive2');
-			markSpan.innerHTML = `Mark: ${mark += 2}`;
+			markSpan.innerHTML = `Score: ${mark += 2}`;
 			console.log(mark);
 		}
 		else {

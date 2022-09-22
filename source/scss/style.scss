@@ -193,11 +193,6 @@ main {
 	flex-direction: column;
 	gap: 5vw;
 
-	&__box {
-		width: 100vw;
-		height: 80px;
-	}
-
 	&_description {
 	}
 
@@ -320,6 +315,13 @@ main {
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr;
 		grid-auto-rows: max-content;
-		grid-gap: 7vw;
+		grid-gap: 7vh;
+	}
+	.levels {
+		gap: 3vh;
+		&__box {
+			width: 100vw;
+			height: 50px;
+		}
 	}
 }
