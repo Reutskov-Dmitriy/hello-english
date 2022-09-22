@@ -84,6 +84,24 @@ h6 {
 .card__description--align {
   margin-top: 3vh;
 }
+.amount {
+  width: 120px;
+  height: 50px;
+  position: fixed;
+  right: -125px;
+  top: 2vh;
+  border-radius: 10px;
+  padding: 5px 10px;
+  background-color: rgba(196, 248, 207, 0.8);
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  transition: 1s;
+}
+.amount__mistakes {
+  color: rgb(253, 9, 9);
+}
+
 .form-verb {
   font-size: 1rem;
   line-height: 2rem;
@@ -108,6 +126,15 @@ h6 {
   width: 100px;
 }
 
+@media (min-width: 760px) {
+  .amount {
+    width: 200px;
+    height: 80px;
+    align-items: center;
+    gap: 10px;
+    right: -205px;
+  }
+}
 .btn {
   transition: 1s;
   border: 1px solid #55b7ff;
@@ -273,16 +300,24 @@ h3 {
   font-size: 1.3rem;
 }
 
+@media (min-width: 760px) {
+  .header {
+    position: fixed;
+  }
+}
 main {
   height: 100%;
   width: 100%;
-  padding: 5vw 0;
 }
 
 .levels {
   display: flex;
   flex-direction: column;
   gap: 5vw;
+}
+.levels__box {
+  width: 100vw;
+  height: 80px;
 }
 .toggle {
   display: flex;

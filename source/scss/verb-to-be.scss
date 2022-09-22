@@ -13,7 +13,27 @@
 	}
 
 	&__form {
-		// background-color: $darkGrey;
+	}
+}
+
+.amount {
+	width: 120px;
+	height: 50px;
+	position: fixed;
+	right: -125px;
+	top: 2vh;
+	border-radius: 10px;
+	padding: 5px 10px;
+	background-color: $lightsalat;
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+	transition: 1s;
+	&__mark {
+	}
+
+	&__mistakes {
+		color: $red;
 	}
 }
 
@@ -42,5 +62,15 @@
 		justify-content: center;
 		height: 24px;
 		width: 100px;
+	}
+}
+
+@media (min-width: 760px) {
+	.amount {
+		width: 200px;
+		height: 80px;
+		align-items: center;
+		gap: 10px;
+		right: -205px;
 	}
 }

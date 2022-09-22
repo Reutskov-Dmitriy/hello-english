@@ -36,7 +36,6 @@
 	<main>
 		<div class="container">
 			<section class="levels">
-				<div class="levels__box"></div>
 				<div class="levels__info">
 					<h2 class="levels__title">Виберіть рівень та завдання для практики</h2>
 					<p class="levels_description"></p>
@@ -53,10 +52,6 @@
 					</div>
 				</div>
 				<ul id="verbs-example" class="cards-list">
-					<div class="amount">
-						<span class="amount__mark">Mark: 0</span>
-						<span class="amount__mistakes">Mistakes: 0</span>
-					</div>
 					<li class="card">
 						<a href="source/pages/verb-to-be.html" class="card__link">
 							<div class="card__items">
@@ -76,7 +71,7 @@
 					<li class="card">
 						<form class="card__form form-verb">
 							<label class="form-verb__ask" for="form-verb__answer">My sister <input id="verb-answer-1"
-									data-verb="is" class="form-verb__answer" type="text"> an English teacher.
+									data-verb="is, is not, isn't" class="form-verb__answer" type="text"> an English teacher.
 								She knows English well.</label>
 							<div id="inactive1" class="form-verb__btn btn">Перевірити</div>
 						</form>
@@ -124,8 +119,8 @@
 					<li class="card">
 						<form class="card__form form-verb" enctype="application/x-www-form-urlencoded">
 							<label class="form-verb__ask" for="form-verb__answer">They <input id="verb-answer-2"
-									data-verb="are, are not" class="form-verb__answer" type="text"> football players. They are
-								not musicians.
+									data-verb="are, are not" class="form-verb__answer" type="text"> football players. They <input
+									id="verb-answer-2" data-verb="are, are not" class="form-verb__answer" type="text"> musicians.
 							</label>
 							<div id="inactive2" class="form-verb__btn btn">Перевірити</div>
 						</form>
@@ -145,7 +140,10 @@
 					<li class="card">
 						<form class="card__form form-verb" enctype="application/x-www-form-urlencoded">
 							<label class="form-verb__ask" for="form-verb__answer">His boss <input id="verb-answer-2"
-									data-verb="is" class="form-verb__answer" type="text"> kind. He likes people.
+									data-verb="is, is not, isn't" class="form-verb__answer" type="text"> kind. He <input
+									id="verb-answer-2" data-verb="is, is not, isn't" class="form-verb__answer" type="text">
+								always
+								angry.
 							</label>
 							<div id="inactive2" class="form-verb__btn btn">Перевірити</div>
 						</form>
@@ -154,9 +152,8 @@
 					<li class="card">
 						<form class="card__form form-verb" enctype="application/x-www-form-urlencoded">
 							<label class="form-verb__ask" for="form-verb__answer">We <input id="verb-answer-2"
-									data-verb="are, are not" class="form-verb__answer" type="text"> the winners. That prize is
-								ours.
-
+									data-verb="are, are not" class="form-verb__answer" type="text"> the winners. That <input
+									id="verb-answer-2" data-verb="are, are not" class="form-verb__answer" type="text"> our prize.
 							</label>
 							<div id="inactive2" class="form-verb__btn btn">Перевірити</div>
 						</form>
@@ -165,8 +162,9 @@
 					<li class="card">
 						<form class="card__form form-verb" enctype="application/x-www-form-urlencoded">
 							<label class="form-verb__ask" for="form-verb__answer"> It <input id="verb-answer-2"
-									data-verb="is, is not, isn't" class="form-verb__answer" type="text"> hot, you should put on a
-								coat.
+									data-verb="is, is not, isn't" class="form-verb__answer" type="text"> hot, it <input
+									id="verb-answer-2" data-verb="is, is not, isn't" class="form-verb__answer" type="text"> cold
+								outside.
 							</label>
 							<div id="inactive2" class="form-verb__btn btn">Перевірити</div>
 						</form>
