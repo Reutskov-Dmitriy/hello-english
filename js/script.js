@@ -12,10 +12,12 @@ let inputArr = [];
 let mark = 0;
 let mistakes = 0;
 
+//Remove popup hints
 const inputAll = document.getElementsByTagName('input');
 for (let i = 0; i < inputAll.length; i++) {
 	inputAll[i].setAttribute('autocomplete', 'off');
 }
+/////////////////////
 verbsExample.addEventListener('keydown', findElement);
 verbsExample.addEventListener('click', findElement);
 
@@ -45,13 +47,11 @@ function checkVerbForm() {
 
 	for (let i = 0; i < inputArr.length; i++) {
 		let inActive = inputArr[i].getAttribute('data-verb').includes(inputArr[i].value.toLowerCase().trim());
-		console.log(inActive);
 
 		if (inActive && inputArr[i].value !== '') {
 			checkBoolean = true;
 			inputArr[i].setAttribute('id', 'inactive2');
 			markSpan.innerHTML = `Score: ${mark += 2}`;
-			console.log(mark);
 		}
 		else {
 			checkBoolean = false;
@@ -69,11 +69,7 @@ function checkVerbForm() {
 		btnCheck.setAttribute('id', 'inactive1');
 
 	}
-	console.log(checkBoolean);
 }
 
 
 
-function sumNum(num) {
-	num += 2;
-}

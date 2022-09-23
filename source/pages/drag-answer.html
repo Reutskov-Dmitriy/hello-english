@@ -6,7 +6,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="../../css/style.css">
-	<script defer src="../../js/script.js"></script>
+	<script defer src="../../js/dragAnswer.js"></script>
 	<title>hello english</title>
 </head>
 
@@ -36,6 +36,7 @@
 	<main>
 		<div class="container">
 			<section class="levels">
+				<div class="levels__box"></div>
 				<div class="levels__info">
 					<h2 class="levels__title">Виберіть рівень та завдання для практики</h2>
 					<p class="levels_description"></p>
@@ -63,21 +64,35 @@
 							</div>
 						</div>
 						<section class="drag">
-							<div class="card__question question">
-								<p class="question__text"></p>
+							<div class="drag__question js-question" draggable="true">
+								<p class="question__text">The weather ____ nice yesterday. We organized a cool party in our
+									garden.</p>
 							</div>
-							<div class="wrapper">
+							<div class="wrapper ">
+								<div class="drag__answer js-answer" draggable="true">
+									<p class="answer__text">was</p>
+								</div>
+
+								<div class="drag__answer js-answer ">
+									<p class="answer__text">was not</p>
+								</div>
+
+								<div class="drag__answer js-answer">
+									<p class="answer__text">were</p>
+								</div>
+
+								<div class="drag__answer js-answer">
+									<p class="answer__text">were not</p>
+								</div>
+
 								<div class="drag__answer answer">
-									<p class="answer__text"></p>
+									<p class="answer__text">were</p>
 								</div>
 
-								<div class="drag__answer">
-									<p class="answer__text"></p>
+								<div class="drag__answer answer">
+									<p class="answer__text">were not</p>
 								</div>
 
-								<div class="drag__answer">
-									<p class="answer__text"></p>
-								</div>
 							</div>
 						</section>
 					</li>
