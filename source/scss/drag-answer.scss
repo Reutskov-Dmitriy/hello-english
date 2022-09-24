@@ -10,10 +10,19 @@
 
 	&__question {
 		width: 100%;
-		min-height: 100px;
+		min-height: 150px;
 		padding: 3vw;
 		text-align: justify;
 		background-color: $skyOpasity;
+	}
+
+	&__empty-field {
+		display: inline-block;
+		width: 100px;
+		height: 30px;
+		text-align: center;
+		border: 1px solid $sky;
+		border-radius: 10px;
 	}
 
 	&__answer {
@@ -33,6 +42,7 @@
 }
 .question {
 	&__text {
+		line-height: 2rem;
 	}
 }
 .wrapper {
@@ -54,6 +64,6 @@
 	display: none;
 }
 
-#hoverd {
+.stuck {
 	background-color: $lightGray;
 }

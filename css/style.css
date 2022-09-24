@@ -168,10 +168,18 @@ b .btn:hover, .btn:active, .btn:focus {
 }
 .drag__question {
   width: 100%;
-  min-height: 100px;
+  min-height: 150px;
   padding: 3vw;
   text-align: justify;
   background-color: rgba(108, 195, 253, 0.3);
+}
+.drag__empty-field {
+  display: inline-block;
+  width: 100px;
+  height: 30px;
+  text-align: center;
+  border: 1px solid #6cc3fd;
+  border-radius: 10px;
 }
 .drag__answer {
   min-width: 100px;
@@ -185,6 +193,10 @@ b .btn:hover, .btn:active, .btn:focus {
   background-color: #6cc3fd;
   color: #fff;
   padding: 5px;
+}
+
+.question__text {
+  line-height: 2rem;
 }
 
 .wrapper {
@@ -202,7 +214,7 @@ b .btn:hover, .btn:active, .btn:focus {
   display: none;
 }
 
-#hoverd {
+.stuck {
   background-color: #e4e4e4;
 }
 
@@ -371,9 +383,9 @@ main {
 .toggle div {
   flex: 0 1 33.3%;
   width: 25.5vw;
-  height: 30px;
   text-align: center;
   border-radius: 10px;
+  height: 40px;
 }
 .toggle div a {
   display: flex;
