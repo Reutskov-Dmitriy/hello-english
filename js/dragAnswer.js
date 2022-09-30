@@ -2,18 +2,20 @@
 const sectionDrag = document.querySelector('.drag');
 const question = document.querySelector('.js-question');
 const wrapp = document.querySelector('.wrapper');
-let blockAnswer;
+let emptyField
+let blockAnswer
+let test
 
 sectionDrag.addEventListener('mousedown', findElem);
-sectionDrag.addEventListener('touchstart', findElem);
-wrapp.ondragover = allowDrop;
+// sectionDrag.addEventListener('touchstart', findElem);
+// wrapp.ondragover = allowDrop;
 
 function allowDrop(event) {
 	event.preventDefault();
 }
 
 function findElem(event) {
-	const emptyField = document.querySelector('.drag__empty-field');
+	emptyField = document.querySelector('.drag__empty-field');
 
 
 	if (event.target.closest('.js-answer')) {
@@ -24,6 +26,7 @@ function findElem(event) {
 
 
 	const dragStart = function () {
+		console.log('dragstart')
 		setTimeout(() => {
 			this.classList.add('hide');
 		}, 0)
@@ -34,7 +37,7 @@ function findElem(event) {
 
 	blockAnswer.addEventListener('dragstart', dragStart);
 	blockAnswer.addEventListener('dragend', dragEnd);
-	blockAnswer.addEventListener('touchstart', myToush);
+	// blockAnswer.addEventListener('touchstart', myToush);
 
 
 	question.addEventListener('dragover', dragOver);
