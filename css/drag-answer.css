@@ -1,9 +1,9 @@
 .drag {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-between;
   min-width: 80vw;
-  height: 70vh;
+  height: 50vh;
   padding: 5px 0;
 }
 .drag__question {
@@ -56,4 +56,13 @@
 
 .stuck {
   background-color: #e4e4e4;
+}
+
+.btn__start {
+  width: 50px;
+  height: 30px;
+}
+
+.card__btn {
+  margin-bottom: 3vh;
 }/*# sourceMappingURL=drag-answer.css.map */

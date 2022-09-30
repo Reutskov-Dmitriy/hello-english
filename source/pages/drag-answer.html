@@ -6,6 +6,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="../../css/style.css">
+	<script defer src="../../js/addQuestion.js"></script>
 	<script defer src="../../js/dragAnswer.js"></script>
 	<title>hello english</title>
 </head>
@@ -59,44 +60,19 @@
 								<img src="../../assets/images/icons/time/drag-and-drop-64.png" alt="drag the words">
 							</figure>
 							<div class="card__text">
-								<h3 class="card__title card__title--align">Drag and drop phrases</h3>
+								<h3 class="card__title card__title--align">Drag and drop phrases and words</h3>
 								<p class="card__description card__description--align"></p>
 							</div>
+							<button id="btn-start" class="btn btn__start">Start</button>
 						</div>
 						<section class="drag">
 							<div class="drag__question js-question">
-								<p class="question__text">The weather
-									<span class="  drag__empty-field js-field"></span> nice yesterday. We organized a
-									cool party in
-									our
-									garden.
-								</p>
 							</div>
-							<div class="wrapper ">
-								<div class="drag__answer js-answer" draggable="true">
-									<p class="answer__text">was</p>
-								</div>
-
-								<div class="drag__answer js-answer" draggable="true">
-									<p class="answer__text">was not</p>
-								</div>
-
-								<div class="drag__answer js-answer" draggable="true">
-									<p class="answer__text">were</p>
-								</div>
-
-								<div class="drag__answer js-answer" draggable="true">
-									<p class="answer__text">were not</p>
-								</div>
-
-
-								<div class="drag__answer answer">
-									<p class="answer__text">were not</p>
-								</div>
-
+							<div id="js-wrapp" class="wrapper ">
 							</div>
 						</section>
 					</li>
+					<button id="inactive2" class="card__btn  btn">Next</button>
 				</ul>
 			</section>
 		</div>

@@ -1,12 +1,11 @@
 'use strict'
-
 const sectionDrag = document.querySelector('.drag');
 const question = document.querySelector('.js-question');
-const emptyField = document.querySelector('.js-field');
 const wrapp = document.querySelector('.wrapper');
 let blockAnswer;
 
 sectionDrag.addEventListener('mousedown', findElem);
+sectionDrag.addEventListener('touchstart', findElem);
 wrapp.ondragover = allowDrop;
 
 function allowDrop(event) {
@@ -14,16 +13,17 @@ function allowDrop(event) {
 }
 
 function findElem(event) {
+	const emptyField = document.querySelector('.drag__empty-field');
+
+
 	if (event.target.closest('.js-answer')) {
 		blockAnswer = event.target.closest('.js-answer');
-		// blockAnswer.setAttribute('id', 'stuck')
-
+	} else {
+		return false
 	}
 
-	console.log(blockAnswer);
 
 	const dragStart = function () {
-		// event.dataTransfer.setData('id', event.target.id);
 		setTimeout(() => {
 			this.classList.add('hide');
 		}, 0)
@@ -34,6 +34,7 @@ function findElem(event) {
 
 	blockAnswer.addEventListener('dragstart', dragStart);
 	blockAnswer.addEventListener('dragend', dragEnd);
+	blockAnswer.addEventListener('touchstart', myToush);
 
 
 	question.addEventListener('dragover', dragOver);
@@ -68,6 +69,11 @@ function findElem(event) {
 		this.append(blockAnswer)
 		this.classList.remove('stuck')
 
+	}
+
+	function myToush(e) {
+		e.preventDefault();
+		console.log('touch')
 	}
 
 

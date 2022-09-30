@@ -3,9 +3,9 @@
 .drag {
 	display: flex;
 	flex-direction: column;
-	justify-content: space-evenly;
+	justify-content: space-between;
 	min-width: 80vw;
-	height: 70vh;
+	height: 50vh;
 	padding: 5px 0;
 
 	&__question {
@@ -26,7 +26,6 @@
 	}
 
 	&__answer {
-		// flex: 0 1 33.3%;
 		min-width: 100px;
 		height: 30px;
 		display: flex;
@@ -66,4 +65,11 @@
 
 .stuck {
 	background-color: $lightGray;
+}
+.btn__start {
+	width: 50px;
+	height: 30px;
+}
+.card__btn {
+	margin-bottom: 3vh;
 }

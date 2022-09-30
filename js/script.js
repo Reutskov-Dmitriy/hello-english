@@ -33,7 +33,10 @@ function findElement(event) {
 		btnCheck.setAttribute('id', 'active');
 		btnCheck.onclick = checkVerbForm;
 		inputAnswer.addEventListener("keyup", confirmKeyEnter(event));
+	} else {
+		return false
 	}
+
 }
 
 function confirmKeyEnter(event) {
