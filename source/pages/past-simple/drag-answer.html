@@ -5,9 +5,8 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="../../css/style.css">
-	<script defer src="../../js/addQuestion.js"></script>
-	<script defer src="../../js/dragAnswer.js"></script>
+	<link rel="stylesheet" href="../../../css/style.css">
+	<script type="module" src="../../../js/dragAnswer.js"></script>
 	<title>hello english</title>
 </head>
 
@@ -44,20 +43,24 @@
 				</div>
 				<div class="levels__toggle toggle">
 					<div class="toggle__beginer">
-						<a href="../../index.html">Beginner</a>
+						<a href="../../../index.html">Beginner</a>
 					</div>
 					<div class="toggle__presentSimp">
-						<a href="../pages/present-simple.html">Past simple</a>
+						<a href="../../pages/past-simple/past-simple.html">Past simple</a>
 					</div>
 					<div class="toggle__advanced">
 						<a href="#"></a>
 					</div>
 				</div>
 				<ul class="cards-list">
+					<div class="amount">
+						<span class="amount__mark">Score: 0</span>
+						<span class="amount__mistakes">Mistakes: 0</span>
+					</div>
 					<li class="card">
 						<div class="card__items">
 							<figure class="card_icon">
-								<img src="../../assets/images/icons/time/drag-and-drop-64.png" alt="drag the words">
+								<img src="../../../assets/images/icons/time/drag-and-drop-64.png" alt="drag the words">
 							</figure>
 							<div class="card__text">
 								<h3 class="card__title card__title--align">Drag and drop phrases and words</h3>
@@ -65,13 +68,11 @@
 							</div>
 							<button id="btn-start" class="btn btn__start">Start</button>
 						</div>
+
 						<section class="drag">
 							<div class="drag__question js-question">
 							</div>
 							<div id="js-wrapp" class="wrapper ">
-								<!-- <div class="drag__answer js__answer" draggable="true">
-									<p class="answer__text">Test</p>
-								</div> -->
 							</div>
 						</section>
 					</li>
@@ -80,7 +81,6 @@
 			</section>
 		</div>
 	</main>
-
 </body>
 
 </html>

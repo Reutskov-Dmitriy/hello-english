@@ -1,4 +1,6 @@
 'use strict'
+import createWorkingArr from "./module/create-working-array.js";
+import { verbToBePresent } from "./module/present-simple-verb.js";
 
 const verbsExample = document.getElementById('verbs-example');
 const amountDiv = document.querySelector('.amount');
@@ -20,6 +22,8 @@ for (let i = 0; i < inputAll.length; i++) {
 /////////////////////
 verbsExample.addEventListener('keydown', findElement);
 verbsExample.addEventListener('click', findElement);
+
+
 
 
 function findElement(event) {
