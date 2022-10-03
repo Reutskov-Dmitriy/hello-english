@@ -20,8 +20,6 @@ const wrapp = document.querySelector('.wrapper');
 let emptyField
 let blockAnswer
 
-
-
 btnStart.onclick = startTask;
 btnNext.onclick = changeQuestion;
 btnCheck.onclick = checkInsertedAttribute;
