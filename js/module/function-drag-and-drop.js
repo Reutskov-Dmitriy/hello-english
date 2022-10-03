@@ -1,8 +1,11 @@
 export default dragAndDrop;
-export { question, scoreForCheck };
+export { question };
 
 const question = document.querySelector('.js-question');
-let scoreForCheck = 0;
+const btnCheck = document.querySelector('.card__btn');
+const wrapp = document.querySelector('.wrapper');
+
+
 function dragAndDrop() {
 	let resultDrop
 
@@ -14,6 +17,7 @@ function dragAndDrop() {
 	}
 	const dragEnd = function () {
 		this.classList.remove('hide');
+
 	}
 
 	blockAnswer.addEventListener('dragstart', dragStart);
@@ -26,10 +30,10 @@ function dragAndDrop() {
 	question.addEventListener('dragleave', dragLeave);
 	emptyField.addEventListener('dragenter', dragEnterField);
 	emptyField.addEventListener('drop', dragDrop);
+	wrapp.addEventListener('drop', dragDropBack);
 
 	function dragOver(event) {
 		event.preventDefault();
-
 	}
 
 	function dragEnter(event) {
@@ -42,24 +46,27 @@ function dragAndDrop() {
 		this.classList.add('stuck')
 	}
 
-
 	function dragLeave() {
 		this.classList.remove('stuck')
-
 	}
 
 	function dragDrop() {
-
 		this.append(blockAnswer)
 		this.classList.remove('stuck')
-		scoreForCheck++;
 		blockAnswer.setAttribute('id', 'check-answer')
-		console.log(scoreForCheck)
+		btnCheck.setAttribute('id', 'active');
+	}
+
+	function dragDropBack() {
+		this.append(blockAnswer)
+		this.classList.remove('stuck')
+		blockAnswer.setAttribute('id', 'none')
+		btnCheck.setAttribute('id', 'inactive1');
+
 	}
 
 	function myToush(e) {
 		e.preventDefault();
 	}
-
 
 }

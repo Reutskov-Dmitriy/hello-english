@@ -22,3 +22,16 @@
 	pointer-events: all;
 	background-color: $blue;
 }
+
+.btn-next {
+	border-radius: 10px;
+	background-color: $lightGray;
+	color: $white;
+	border: none;
+	&:hover,
+	&:active,
+	&:focus {
+		color: $white;
+		background-color: $darkGrey;
+	}
+}

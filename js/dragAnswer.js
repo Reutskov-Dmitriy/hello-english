@@ -1,10 +1,12 @@
 'use strict'
 import { questionArr, questionBeforeSpan, questionAfter, answerOptions, correctAnswer } from './module/past-simple-phrases.js';
 import { amountDiv, markSpan, mistakesSpan, mark, mistakes, changeAmount } from './module/check-insert.js';
-import dragAndDrop, { question, scoreForCheck } from './module/function-drag-and-drop.js';
+import dragAndDrop, { question } from './module/function-drag-and-drop.js';
 
-const btnNext = document.querySelector('.card__btn');
-const btnStart = document.getElementById('btn-start');
+const btnCheck = document.querySelector('.card__btn');
+const btnNext = document.querySelector('.check__btn');
+const btnStart = document.getElementById('button-start');
+const containerCheck = document.querySelector('.card__check')
 let divAnswer
 let tagP
 const spanClass = 'drag__empty-field';
@@ -22,9 +24,10 @@ let blockAnswer
 
 btnStart.onclick = startTask;
 btnNext.onclick = changeQuestion;
+btnCheck.onclick = checkInsertedAttribute;
 
 function startTask() {
-	btnNext.setAttribute('id', 'active');
+	btnStart.setAttribute('id', 'inactive1')
 	checkDelete();
 	index = 0;
 	changeQuestion();
@@ -32,33 +35,36 @@ function startTask() {
 }
 
 function changeQuestion() {
+	btnCheck.setAttribute('id', 'inactive1');
+
 	if (index <= questionArr.length + 1) {
 		checkDelete();
 		addQuestion(questionArr[index]);
 		addAnswer(questionArr[index]);
 	}
 	else if (index > questionArr.length) {
-
+		index = 0
 	}
 
-
-	index++;
+	containerCheck.style.bottom = '-30vh';
 }
 
 function checkInsertedAttribute() {
-	if (scoreForCheck > 0) {
-		const idCheckAnswer = document.getElementById('check-answer')
-		changeAmount(idCheckAnswer.getAttribute('data-answer').includes(questionArr[index].correctAnswer[0]))
-	}
+
+	const idCheckAnswer = document.getElementById('check-answer')
+	let resultBoolean = idCheckAnswer.getAttribute('data-answer').includes(questionArr[index].correctAnswer[0]);
+	changeAmount(resultBoolean)
+
+
+	index++;
 }
 
 // Delete previos question
 
 function checkDelete() {
 	const wrapp = document.querySelector('.wrapper');
-	const question = document.querySelector('.js-question');
 
-	if (index > 0 && !checkInsertedAttribute()) {
+	if (index > 0) {
 		question.removeChild(tagP);
 
 		while (wrapp.firstChild) {
@@ -68,7 +74,7 @@ function checkDelete() {
 }
 
 
-// Add question 
+// Render question 
 
 function addQuestion(value) {
 	tagP = document.createElement('p');
@@ -81,6 +87,7 @@ function addQuestion(value) {
 	span.after(value.questionAfter)
 	document.querySelector(entryField).appendChild(tagP)
 }
+// Render answer
 function addAnswer(value) {
 	value.answerOptions.forEach((e) => {
 		divAnswer = document.createElement('div');

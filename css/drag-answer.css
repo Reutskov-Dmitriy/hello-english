@@ -68,4 +68,33 @@
   width: 100px;
   height: 30px;
   margin-bottom: 3vh;
+}
+
+.check {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 30vh;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  right: 0;
+  bottom: -30vh;
+  padding: 1vh;
+}
+.check__btn {
+  width: 200px;
+  height: 30px;
+  background-color: #e4e4e4;
+}
+
+#right {
+  background-color: rgba(196, 248, 207, 0.9);
+  color: rgb(70, 199, 98);
+}
+
+#wrong {
+  background-color: rgb(235, 130, 130);
+  color: rgb(253, 9, 9);
 }/*# sourceMappingURL=drag-answer.css.map */

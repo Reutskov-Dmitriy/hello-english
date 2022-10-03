@@ -4,14 +4,14 @@ export const questionArr = [
 	{
 		questionBeforeSpan: ['The weather '],
 		questionAfter: [' nice yesterday. We organized a cool party in our garden.'],
-		answerOptions: ['was', 'were', 'was not', 'were not', 'am'],
+		answerOptions: ['was', 'were', 'was not', 'were not'],
 		correctAnswer: ['was']
 
 	},
 	{
 		questionBeforeSpan: ['His boss  '],
 		questionAfter: [' so angry that he fired him. '],
-		answerOptions: ['was', 'were', 'was not', 'is', 'were not'],
+		answerOptions: ['was', 'were', 'was not', 'were not'],
 		correctAnswer: ['was']
 
 	},
@@ -27,7 +27,7 @@ export const questionArr = [
 	},
 	{
 		questionBeforeSpan: ['Her mom  '],
-		questionAfter: [' tired, she did a lot of housework that evening.'],
+		questionAfter: [' tired, so she decided to do a lot of housework that evening.'],
 
 		answerOptions: ['was', 'were', 'was not', 'were not'],
 		correctAnswer: ['was not']
@@ -45,7 +45,7 @@ export const questionArr = [
 	},
 	{
 		questionBeforeSpan: ['They '],
-		questionAfter: [' happy with their salary so they decided to find new job. '],
+		questionAfter: [' happy with their salary so they decided to find a new job. '],
 
 		answerOptions: ['was', 'were', 'was not', 'were not'],
 		correctAnswer: ['were not']
