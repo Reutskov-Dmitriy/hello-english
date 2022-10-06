@@ -2,6 +2,7 @@
 import { questionArr, questionBeforeSpan, questionAfter, answerOptions, correctAnswer } from './module/past-simple-phrases.js';
 import { amountDiv, markSpan, mistakesSpan, mark, mistakes, changeAmount } from './module/check-insert.js';
 import dragAndDrop, { question } from './module/function-drag-and-drop.js';
+import concatString from './module/function-concat-sting.js';
 
 const btnCheck = document.querySelector('.card__btn');
 const btnNext = document.querySelector('.check__btn');
@@ -16,7 +17,7 @@ let index = 0;
 ////////////////////////
 
 const sectionDrag = document.querySelector('.drag');
-const wrapp = document.querySelector('.wrapper');
+const answersList = document.querySelector('.answers-list');
 let emptyField
 let blockAnswer
 
@@ -48,9 +49,10 @@ function changeQuestion() {
 }
 
 function checkInsertedAttribute() {
-
+	const correct = concatString(questionArr[index].correctAnswer[0])
 	const idCheckAnswer = document.getElementById('check-answer')
-	let resultBoolean = idCheckAnswer.getAttribute('data-answer').includes(questionArr[index].correctAnswer[0]);
+	let resultBoolean = concatString(idCheckAnswer.getAttribute('data-answer')) == (correct);
+	console.log(correct, resultBoolean, concatString(idCheckAnswer.getAttribute('data-answer')))
 	changeAmount(resultBoolean)
 
 
@@ -60,7 +62,7 @@ function checkInsertedAttribute() {
 // Delete previos question
 
 function checkDelete() {
-	const wrapp = document.querySelector('.wrapper');
+	const wrapp = document.querySelector('.answers-list');
 
 	if (index > 0) {
 		question.removeChild(tagP);
@@ -100,7 +102,7 @@ function addAnswer(value) {
 		pAnswer.classList.add('answer__text');
 		pAnswer.innerHTML = e;
 
-		document.querySelector('.wrapper').appendChild(divAnswer);
+		document.querySelector('.answers-list').appendChild(divAnswer);
 
 	})
 }
@@ -109,7 +111,7 @@ function addAnswer(value) {
 
 sectionDrag.addEventListener('mousedown', findElem);
 sectionDrag.addEventListener('touchstart', findElem);
-wrapp.ondragover = allowDrop;
+answersList.ondragover = allowDrop;
 
 
 function allowDrop(event) {

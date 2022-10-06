@@ -44,7 +44,7 @@
 		line-height: 2rem;
 	}
 }
-.wrapper {
+.answers-list {
 	width: 100%;
 	height: auto;
 	display: flex;
@@ -84,14 +84,12 @@
 	justify-content: space-around;
 	align-items: center;
 	height: 30vh;
-	// background-color: $lightsalat;
 	position: fixed;
 	z-index: 999;
 	left: 0;
 	right: 0;
 	bottom: -30vh;
 	padding: 1vh;
-	// color: $darksalat;
 	&__title {
 	}
 

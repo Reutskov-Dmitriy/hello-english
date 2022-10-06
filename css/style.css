@@ -211,7 +211,7 @@ h6 {
   line-height: 2rem;
 }
 
-.wrapper {
+.answers-list {
   width: 100%;
   height: auto;
   display: flex;
@@ -259,10 +259,6 @@ h6 {
   width: 200px;
   height: 30px;
   background-color: #e4e4e4;
-}
-.check__btn:hover, .check__btn:active, .check__btn:focus {
-  color: #fff;
-  background-color: #535353;
 }
 
 #right {

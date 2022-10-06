@@ -3,7 +3,7 @@ export { question };
 
 const question = document.querySelector('.js-question');
 const btnCheck = document.querySelector('.card__btn');
-const wrapp = document.querySelector('.wrapper');
+const answersList = document.querySelector('.answers-list');
 
 
 function dragAndDrop() {
@@ -30,7 +30,7 @@ function dragAndDrop() {
 	question.addEventListener('dragleave', dragLeave);
 	emptyField.addEventListener('dragenter', dragEnterField);
 	emptyField.addEventListener('drop', dragDrop);
-	wrapp.addEventListener('drop', dragDropBack);
+	answersList.addEventListener('drop', dragDropBack);
 
 	function dragOver(event) {
 		event.preventDefault();

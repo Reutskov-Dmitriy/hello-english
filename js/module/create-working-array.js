@@ -8,5 +8,5 @@ function createWorkingArr(arr) {
 		const numRandom = Math.floor(Math.random() * arr.length);
 		workingArr.push(arr.slice(numRandom, numRandom + 1))
 	}
-
+	return workingArr
 }
