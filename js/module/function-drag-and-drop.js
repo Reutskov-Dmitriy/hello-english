@@ -3,11 +3,10 @@ export { question };
 
 const question = document.querySelector('.js-question');
 const btnCheck = document.querySelector('.card__btn');
-const answersList = document.querySelector('.answers-list');
+const answersList = document.querySelector('.js-answers');
 
 
 function dragAndDrop() {
-	let resultDrop
 
 	const dragStart = function () {
 		console.log('dragstart')

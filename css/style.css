@@ -99,7 +99,7 @@ h6 {
   transition: 1s;
 }
 .amount__mistakes {
-  color: rgb(253, 9, 9);
+  color: #fd0909;
 }
 
 .form-verb {
@@ -268,9 +268,41 @@ h6 {
 
 #wrong {
   background-color: rgb(235, 130, 130);
-  color: rgb(253, 9, 9);
+  color: #fd0909;
 }
 
+.flex--column {
+  display: flex;
+  flex-direction: column;
+  gap: 5vh;
+}
+
+.match__phrases, .match__answers {
+  border: 1px solid #6cc3fd;
+  background-color: #f8d87e;
+}
+.match__field {
+  border: 1px solid #0b7fdf;
+  width: 100%;
+  min-height: 150px;
+  padding: 3vw;
+  text-align: justify;
+  background-color: rgba(108, 195, 253, 0.3);
+}
+
+.match--grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-rows: -webkit-max-content;
+  grid-auto-rows: max-content;
+  grid-gap: 5vh;
+}
+
+@media (min-width: 760px) {
+  .grid3fr {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
 body {
   font-family: "Open Sans", sans-serif;
   color: #252525;
@@ -400,7 +432,7 @@ h3 {
   color: #fff;
 }
 .logo__title a {
-  box-shadow: 0 0 15px #5cf77d;
+  box-shadow: 0 0 15px rgb(92, 247, 125);
   border-radius: 20px;
   width: 100%;
   height: 100%;
@@ -485,7 +517,7 @@ main {
   transition: 0.5s;
 }
 .card:hover {
-  box-shadow: 0 0 15px #5cf77d;
+  box-shadow: 0 0 15px rgb(92, 247, 125);
 }
 .card_icon {
   width: 80px;

@@ -1,5 +1,5 @@
 'use strict'
-import { questionArr, questionBeforeSpan, questionAfter, answerOptions, correctAnswer } from './module/past-simple-phrases.js';
+import { questionArr, questionBeforeSpan, questionAfter, answerOptions, correctAnswer } from './module/phrases-past-simple.js';
 import { amountDiv, markSpan, mistakesSpan, mark, mistakes, changeAmount } from './module/check-insert.js';
 import dragAndDrop, { question } from './module/function-drag-and-drop.js';
 import concatString from './module/function-concat-sting.js';
@@ -11,13 +11,13 @@ const containerCheck = document.querySelector('.card__check')
 let divAnswer
 let tagP
 const spanClass = 'drag__empty-field';
-const entryField = '.js-question';
+// const entryField = '.js-question';
 let index = 0;
 
 ////////////////////////
 
 const sectionDrag = document.querySelector('.drag');
-const answersList = document.querySelector('.answers-list');
+const answersList = document.querySelector('.js-answers');
 let emptyField
 let blockAnswer
 
@@ -52,23 +52,20 @@ function checkInsertedAttribute() {
 	const correct = concatString(questionArr[index].correctAnswer[0])
 	const idCheckAnswer = document.getElementById('check-answer')
 	let resultBoolean = concatString(idCheckAnswer.getAttribute('data-answer')) == (correct);
-	console.log(correct, resultBoolean, concatString(idCheckAnswer.getAttribute('data-answer')))
 	changeAmount(resultBoolean)
-
-
 	index++;
 }
 
 // Delete previos question
 
 function checkDelete() {
-	const wrapp = document.querySelector('.answers-list');
+	const answersList = document.querySelector('.js-answers');
 
 	if (index > 0) {
 		question.removeChild(tagP);
 
-		while (wrapp.firstChild) {
-			wrapp.removeChild(wrapp.firstChild);
+		while (answersList.firstChild) {
+			answersList.removeChild(answersList.firstChild);
 		}
 	}
 }
@@ -85,7 +82,7 @@ function addQuestion(value) {
 	span.classList.add(spanClass);
 	span.before(value.questionBeforeSpan)
 	span.after(value.questionAfter)
-	document.querySelector(entryField).appendChild(tagP)
+	document.querySelector('.js-question').appendChild(tagP)
 }
 // Render answer
 function addAnswer(value) {
