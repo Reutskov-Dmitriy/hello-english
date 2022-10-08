@@ -23,7 +23,7 @@
 }
 .drag__answer {
   min-width: 100px;
-  height: 30px;
+  height: auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -48,6 +48,10 @@
   justify-content: center;
   align-items: center;
   border: 1px solid #6cc3fd;
+}
+
+.answer__text {
+  height: auto;
 }
 
 .hide {

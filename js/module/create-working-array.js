@@ -1,22 +1,20 @@
 'use strict'
-export default createWorkingArr;
-export { workingPhrasesPiece1 };
+export default getRandomChunks;
 
 
-let workingPhrasesPiece1
-
-function createWorkingArr(arr, key1) {
-	let workingArr = [];
-	workingPhrasesPiece1 = key1;
-	let newArr = [];
-	for (let i = 0; i < 10; i++) {
-		newArr.push(arr.slice(i, i + 1))
-
+function getRandomChunks(arr, length) {
+	const newArr = arr.slice();
+	const chunks = [];
+	while (newArr.length) {
+		const chunk = [];
+		for (let i = 0; i < length && newArr.length; i++) {
+			const index = Math.floor(Math.random() * newArr.length)
+			chunk.push(...newArr.splice(index, 1))
+		}
+		chunks.push(chunk);
 	}
-	while (newArr.length > 0) {
-		const numRandom = Math.floor(Math.random() * newArr.length);
-		workingArr.push(newArr.splice(numRandom, 1))
-	}
-	return workingArr
+	return chunks
+
 }
+
 

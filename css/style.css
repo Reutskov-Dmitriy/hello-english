@@ -141,10 +141,15 @@ h6 {
   border: 1px solid #6cc3fd;
   border-radius: 10px;
   color: #fff;
+  transform: scale(1);
 }
 .btn:hover, .btn:active, .btn:focus {
   color: #fff;
   background-color: #0b7fdf;
+}
+.btn:active {
+  transform: scale(0.95);
+  transition: transform 0.3s;
 }
 
 #inactive1,
@@ -195,7 +200,7 @@ h6 {
 }
 .drag__answer {
   min-width: 100px;
-  height: 30px;
+  height: auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -220,6 +225,10 @@ h6 {
   justify-content: center;
   align-items: center;
   border: 1px solid #6cc3fd;
+}
+
+.answer__text {
+  height: auto;
 }
 
 .hide {
@@ -289,18 +298,37 @@ h6 {
   text-align: justify;
   background-color: rgba(108, 195, 253, 0.3);
 }
-
 .match--grid {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 0.5fr 1.5fr;
   grid-auto-rows: -webkit-max-content;
   grid-auto-rows: max-content;
   grid-gap: 5vh;
 }
 
+.active-card {
+  background-color: #535353;
+  box-shadow: 0 0 15px rgb(92, 247, 125);
+}
+
+.inactive-card {
+  background-color: rgba(196, 248, 207, 0.9);
+  pointer-events: none;
+}
+
+.js-correct {
+  cursor: pointer;
+  transform: scale(1);
+}
+.js-correct:active {
+  background-color: #535353;
+  transform: scale(0.95);
+  transition: transform 0.3s;
+}
+
 @media (min-width: 760px) {
   .grid3fr {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 0.5fr 1.5fr;
   }
 }
 body {
@@ -339,7 +367,7 @@ h3 {
   width: 100vw;
   height: 100%;
   position: absolute;
-  z-index: 98;
+  z-index: 99;
   text-align: center;
   background-color: #6cc3fd;
 }

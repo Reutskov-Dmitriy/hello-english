@@ -52,7 +52,7 @@
 						<a href="#"></a>
 					</div>
 				</div>
-				<ul class="cards-list card-list--grid">
+				<ul id="js-cardList" class="cards-list card-list--grid">
 					<div class="amount">
 						<span class="amount__mark">Score: 0</span>
 						<span class="amount__mistakes">Mistakes: 0</span>
@@ -63,18 +63,17 @@
 								<img src="../../../assets/images/icons/time/puzzle_icon.svg" alt="drag the words">
 							</figure> -->
 							<div class="card__text">
-								<h3 class="card__title card__title--align">Match a word with it's definitions</h3>
+								<h3 class="card__title card__title--align">Match a word with its definition</h3>
 								<p class="card__description card__description--align"></p>
 							</div>
-							<button id="button-start" class="btn btn__start">Start</button>
+							<!-- <button id="button-start" class="btn btn__start">Start</button> -->
 						</div>
 
 						<section class="match match--grid grid3fr">
 							<div class="match__answers answers-list js-answers">
 							</div>
-							<div class="match__field js__question">
-							</div>
-							<div class="match__phrases js-phrases"></div>
+
+							<div class="match__phrases answers-list js-phrases"></div>
 						</section>
 					</li>
 					<button id="inactive2" class="card__btn  btn">Check</button>

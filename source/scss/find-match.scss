@@ -26,7 +26,7 @@
 }
 .match--grid {
 	display: grid;
-	grid-template-columns: 1fr;
+	grid-template-columns: 0.5fr 1.5fr;
 	grid-auto-rows: max-content;
 	grid-gap: 5vh;
 }
@@ -34,13 +34,33 @@
 	&__question {
 	}
 }
-.js-match {
-}
+
 .answers-list {
+}
+
+.active-card {
+	background-color: $darkGrey;
+	box-shadow: 0 0 15px $salat;
+}
+
+.inactive-card {
+	background-color: $lightsalat;
+	pointer-events: none;
+}
+
+.js-correct {
+	cursor: pointer;
+	transform: scale(1);
+	&:active {
+		background-color: $darkGrey;
+
+		transform: scale(0.95);
+		transition: transform 0.3s;
+	}
 }
 
 @media (min-width: 760px) {
 	.grid3fr {
-		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-columns: 0.5fr 1.5fr;
 	}
 }
