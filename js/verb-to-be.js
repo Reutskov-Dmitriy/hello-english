@@ -1,6 +1,6 @@
 'use strict'
-import createWorkingArr from "./module/create-working-array.js";
-import { verbToBePresent } from "./module/present-simple-verb.js";
+// // import createWorkingArr from "./module/create-working-array.js";
+// import { verbToBePresent } from "./module/present-simple-verb.js";
 
 const verbsExample = document.getElementById('verbs-example');
 const amountDiv = document.querySelector('.amount');
@@ -20,13 +20,13 @@ for (let i = 0; i < inputAll.length; i++) {
 	inputAll[i].setAttribute('autocomplete', 'off');
 }
 /////////////////////
-verbsExample.addEventListener('keydown', findElement);
-verbsExample.addEventListener('click', findElement);
+verbsExample.addEventListener('keydown', checkElement);
+verbsExample.addEventListener('click', checkElement);
 
 
 
 
-function findElement(event) {
+function checkElement(event) {
 	if (event.target.closest('.form-verb__answer')) {
 		inputAnswer = event.target.closest('.form-verb__answer');
 		amountDiv.style.right = '5px';

@@ -1,17 +1,16 @@
 'use strict'
-import { questionArr, questionBeforeSpan, questionAfter, answerOptions, correctAnswer } from './module/phrases-past-simple.js';
-import { amountDiv, markSpan, mistakesSpan, mark, mistakes, changeAmount } from './module/check-insert.js';
+import { toBePastArr } from './module/phrases-past-simple.js';
+import { amountDiv, markSpan, mistakesSpan, mark, mistakes, changeAmount } from "./module/changeAmount.js";
 import dragAndDrop, { question } from './module/function-drag-and-drop.js';
 import concatString from './module/function-concat-sting.js';
 
 const btnCheck = document.querySelector('.card__btn');
-const btnNext = document.querySelector('.check__btn');
+const btnNext = document.querySelector('.btn-next');
 const btnStart = document.getElementById('button-start');
 const containerCheck = document.querySelector('.card__check')
 let divAnswer
 let tagP
 const spanClass = 'drag__empty-field';
-// const entryField = '.js-question';
 let index = 0;
 
 ////////////////////////
@@ -36,12 +35,12 @@ function startTask() {
 function changeQuestion() {
 	btnCheck.setAttribute('id', 'inactive1');
 
-	if (index <= questionArr.length + 1) {
+	if (index <= toBePastArr.length + 1) {
 		checkDelete();
-		addQuestion(questionArr[index]);
-		addAnswer(questionArr[index]);
+		addQuestion(toBePastArr[index]);
+		addAnswer(toBePastArr[index]);
 	}
-	else if (index > questionArr.length) {
+	else if (index > toBePastArr.length) {
 		index = 0
 	}
 
@@ -49,7 +48,7 @@ function changeQuestion() {
 }
 
 function checkInsertedAttribute() {
-	const correct = concatString(questionArr[index].correctAnswer[0])
+	const correct = concatString(toBePastArr[index].correctAnswer[0])
 	const idCheckAnswer = document.getElementById('check-answer')
 	let resultBoolean = concatString(idCheckAnswer.getAttribute('data-answer')) == (correct);
 	changeAmount(resultBoolean)

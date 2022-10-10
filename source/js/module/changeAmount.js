@@ -8,7 +8,7 @@ let mark = 0;
 let mistakes = 0;
 const containerCheck = document.querySelector('.card__check')
 const textAnswer = document.querySelector('.check__title')
-const btnNext = document.querySelector('.check__btn');
+const btnNext = document.querySelector('.btn-next');
 
 // This function checks the inserted element (true & false)
 

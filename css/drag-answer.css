@@ -87,12 +87,6 @@
   bottom: -30vh;
   padding: 1vh;
 }
-.check__btn {
-  width: 200px;
-  height: 30px;
-  background-color: #e4e4e4;
-}
-
 #right {
   background-color: rgba(196, 248, 207, 0.9);
   color: rgb(70, 199, 98);
