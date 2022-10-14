@@ -1,1 +1,43 @@
-/*# sourceMappingURL=button.css.map */
+.btn {
+  transition: 1s;
+  border: 1px solid #6cc3fd;
+  border-radius: 10px;
+  color: #fff;
+}
+.btn:hover, .btn:active, .btn:focus {
+  color: #fff;
+  background-color: #0b7fdf;
+}
+
+#inactive1,
+#inactive2 {
+  pointer-events: none;
+  background-color: #e4e4e4;
+}
+
+#active,
+.active {
+  pointer-events: all;
+  background-color: #0b7fdf;
+}
+
+.btn-next {
+  width: 200px;
+  height: 30px;
+  border-radius: 10px;
+  background-color: #e4e4e4;
+  color: #fff;
+  border: none;
+}
+.btn-next:hover, .btn-next:active, .btn-next:focus {
+  color: #fff;
+  background-color: #535353;
+}
+
+.btn-scale {
+  transform: scale(1);
+}
+.btn-scale:active {
+  transform: scale(0.95);
+  transition: transform 0.3s;
+}/*# sourceMappingURL=button.css.map */

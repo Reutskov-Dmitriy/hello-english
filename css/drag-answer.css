@@ -33,6 +33,7 @@
   background-color: #6cc3fd;
   color: #fff;
   padding: 5px;
+  cursor: move;
 }
 
 .question__text {
@@ -87,6 +88,7 @@
   bottom: -30vh;
   padding: 1vh;
 }
+
 #right {
   background-color: rgba(196, 248, 207, 0.9);
   color: rgb(70, 199, 98);

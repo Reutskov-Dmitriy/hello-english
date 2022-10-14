@@ -6,14 +6,16 @@ const btnCheck = document.querySelector('.card__btn');
 const answersList = document.querySelector('.js-answers');
 
 
-function dragAndDrop() {
+function dragAndDrop(event, blockAnswer, emptyField) {
 
 	const dragStart = function () {
-		console.log('dragstart')
 		setTimeout(() => {
 			this.classList.add('hide');
 		}, 0)
+		// this.classList.add('hide');
+
 	}
+
 	const dragEnd = function () {
 		this.classList.remove('hide');
 
@@ -49,17 +51,20 @@ function dragAndDrop() {
 		this.classList.remove('stuck')
 	}
 
-	function dragDrop() {
+	function dragDrop(event) {
+
 		this.append(blockAnswer)
 		this.classList.remove('stuck')
 		blockAnswer.setAttribute('id', 'check-answer')
 		btnCheck.setAttribute('id', 'active');
 	}
 
-	function dragDropBack() {
+	function dragDropBack(event) {
+
 		this.append(blockAnswer)
 		this.classList.remove('stuck')
 		blockAnswer.setAttribute('id', 'none')
+
 		btnCheck.setAttribute('id', 'inactive1');
 
 	}

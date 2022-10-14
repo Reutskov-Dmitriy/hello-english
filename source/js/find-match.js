@@ -1,6 +1,6 @@
 "use strict"
 
-import addAnswer from "./module/fun-render-answer.js";
+import { addAnswer } from "./module/fun-render-answer.js";
 import { phrasesPresentArr } from "./module/phrases-match-present.js";
 import getRandomChunks from "./module/fun-get-random-chunks.js";
 

@@ -1,15 +1,15 @@
-export { toBePastArr };
+export { toBePastArr, formVerbPast };
 
 const toBePastArr = [
 	{
-		questionBeforeSpan: ['The weather '],
+		questionBefore: ['The weather '],
 		questionAfter: [' nice yesterday. We organized a cool party in our garden.'],
 		answerOptions: ['was', 'were', 'was not', 'were not'],
 		correctAnswer: ['was']
 
 	},
 	{
-		questionBeforeSpan: ['His boss  '],
+		questionBefore: ['His boss  '],
 		questionAfter: [' so angry that he fired him. '],
 		answerOptions: ['was', 'were', 'was not', 'were not'],
 		correctAnswer: ['was']
@@ -17,77 +17,52 @@ const toBePastArr = [
 	},
 
 	{
-		questionBeforeSpan: ['That picture '],
+		questionBefore: ['That picture '],
 		questionAfter: [' cheap, I spent a lot of money to buy it.'],
-
 		answerOptions: ['was', 'were', 'was not', 'were not'],
 		correctAnswer: ['was not']
-
-
 	},
 	{
-		questionBeforeSpan: ['Her mom  '],
+		questionBefore: ['Her mom  '],
 		questionAfter: [' tired, so she decided to do a lot of housework that evening.'],
-
 		answerOptions: ['was', 'were', 'was not', 'were not'],
 		correctAnswer: ['was not']
-
-
 	},
 	{
-		questionBeforeSpan: ['Guests '],
+		questionBefore: ['Guests '],
 		questionAfter: [' excited and had much fun. '],
-
 		answerOptions: ['was', 'were', 'was not', 'were not'],
 		correctAnswer: ['were']
-
-
 	},
 	{
-		questionBeforeSpan: ['They '],
+		questionBefore: ['They '],
 		questionAfter: [' happy with their salary so they decided to find a new job. '],
-
 		answerOptions: ['was', 'were', 'was not', 'were not'],
 		correctAnswer: ['were not']
-
-
 	},
 	{
-		questionBeforeSpan: ['Mary '],
+		questionBefore: ['Mary '],
 		questionAfter: [' confused. She didn’t know what to do.  '],
-
 		answerOptions: ['was', 'were', 'was not', 'were not'],
 		correctAnswer: ['was']
-
-
 	},
 	{
-		questionBeforeSpan: ['The artists '],
+		questionBefore: ['The artists '],
 		questionAfter: ['really creative, they found an unusual solution. '],
-
 		answerOptions: ['was', 'were', 'was not', 'were not'],
 		correctAnswer: ['were']
-
-
 	},
 	{
-		questionBeforeSpan: ['I '],
+		questionBefore: ['I '],
 		questionAfter: [' fat in my childhood because I did sport. '],
-
 		answerOptions: ['was', 'were', 'was not', 'were not'],
 		correctAnswer: ['was not']
-
-
 	},
 	{
-		questionBeforeSpan: ['My friends '],
+		questionBefore: ['My friends '],
 		questionAfter: [' shy, they liked to perform on the stage. '],
-
 		answerOptions: ['was', 'were', 'was not', 'were not'],
 		correctAnswer: ['were not']
-
-
-
 	},
 
 
@@ -95,90 +70,57 @@ const toBePastArr = [
 
 const formVerbPast = [
 	{
-		questionBeforeSpan: ['I'],
+		questionBefore: ['I '],
 		questionAfter: [' (see) this man 10 minutes ago. '],
 		correctAnswer: ['saw']
-
 	},
 	{
-		questionBeforeSpan: ['We '],
+		questionBefore: ['We '],
 		questionAfter: [' (like) watching romantic comedies in the past.'],
 		correctAnswer: ['liked']
-
 	},
 
 	{
-		questionBeforeSpan: ['That picture '],
-		questionAfter: [' cheap, I spent a lot of money to buy it.'],
-
-		correctAnswer: ['was not']
-
-
+		questionBefore: ['They '],
+		questionAfter: [' (read) many books last summer.'],
+		correctAnswer: ['read']
 	},
 	{
-		questionBeforeSpan: ['Her mom  '],
-		questionAfter: [' tired, so she decided to do a lot of housework that evening.'],
-
-		correctAnswer: ['was not']
-
-
+		questionBefore: ['My friend  '],
+		questionAfter: [' (come) to me yesterday.'],
+		correctAnswer: ['came']
 	},
 	{
-		questionBeforeSpan: ['Guests '],
-		questionAfter: [' excited and had much fun. '],
-
-		answerOptions: ['was', 'were', 'was not', 'were not'],
-		correctAnswer: ['were']
-
-
+		questionBefore: ['Their parents '],
+		questionAfter: [' (fly) to Lviv in 2020.'],
+		correctAnswer: ['flew']
 	},
 	{
-		questionBeforeSpan: ['They '],
-		questionAfter: [' happy with their salary so they decided to find a new job. '],
+		questionBefore: ['My colleague '],
+		questionAfter: [' (write) an email and sent it in the morning.'],
+		correctAnswer: ['wrote']
+	},
 
-		answerOptions: ['was', 'were', 'was not', 'were not'],
-		correctAnswer: ['were not']
-
-
+	{
+		questionBefore: ['Ann '],
+		questionAfter: [' (get) home and started to clean her house.'],
+		correctAnswer: ['got']
 	},
 	{
-		questionBeforeSpan: ['Mary '],
-		questionAfter: [' confused. She didn’t know what to do.  '],
-
-		answerOptions: ['was', 'were', 'was not', 'were not'],
-		correctAnswer: ['was']
-
-
+		questionBefore: ['I '],
+		questionAfter: [' (put) the book on the table and opened the door.'],
+		correctAnswer: ['put']
 	},
 	{
-		questionBeforeSpan: ['The artists '],
-		questionAfter: ['really creative, they found an unusual solution. '],
-
-		answerOptions: ['was', 'were', 'was not', 'were not'],
-		correctAnswer: ['were']
-
-
+		questionBefore: ['My dad  '],
+		questionAfter: [' (have) two dogs last year.'],
+		correctAnswer: ['had']
 	},
 	{
-		questionBeforeSpan: ['I '],
-		questionAfter: [' fat in my childhood because I did sport. '],
-
-		answerOptions: ['was', 'were', 'was not', 'were not'],
-		correctAnswer: ['was not']
-
-
+		questionBefore: ['She '],
+		questionAfter: [' (fall) down 3 days ago.'],
+		correctAnswer: ['fell']
 	},
-	{
-		questionBeforeSpan: ['My friends '],
-		questionAfter: [' shy, they liked to perform on the stage. '],
-
-		answerOptions: ['was', 'were', 'was not', 'were not'],
-		correctAnswer: ['were not']
-
-
-
-	},
-
 
 ]
 

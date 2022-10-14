@@ -37,6 +37,7 @@
 		background-color: $sky;
 		color: $white;
 		padding: 5px;
+		cursor: move;
 	}
 }
 .question {
@@ -91,8 +92,6 @@
 	right: 0;
 	bottom: -30vh;
 	padding: 1vh;
-	&__title {
-	}
 }
 
 #right {

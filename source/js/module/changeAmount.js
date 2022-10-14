@@ -9,16 +9,20 @@ let mistakes = 0;
 const containerCheck = document.querySelector('.card__check')
 const textAnswer = document.querySelector('.check__title')
 const btnNext = document.querySelector('.btn-next');
+const tagP = document.querySelector('.check__answer');
+
 
 // This function checks the inserted element (true & false)
 
-function changeAmount(boolean) {
+function changeAmount(boolean, arr, key1, key2, correctAnswer) {
 	let checkBoolean
 
 	if (boolean !== true) {
 		checkBoolean = false;
+
 		containerCheck.setAttribute('id', 'wrong');
 		textAnswer.innerHTML = 'Wrong';
+		tagP.innerHTML = ` ${arr[key1]} ${arr[correctAnswer]} ${arr[key2]}`;
 		btnNext.style.backgroundColor = 'rgb(253, 9, 9)';
 		mistakesSpan.innerHTML = `Mistakes: ${mistakes += 1}`;
 	}

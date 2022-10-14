@@ -1,26 +1,50 @@
 "use strickt"
 
-export default renderQuestion;
+export { renderQuestions, addQuestion };
 
 
 
-// Render Question
-function renderQuestion(arr, key1, key2, keyCorrect, field) {
+// Render Questions 
+function renderQuestions(arr, key1, key2, keyCorrect, tagAnswer, field) {
 	arr.forEach(element => {
-		let tagLi = document.createElement('li');
-		let tagP = document.createElement('p');
-		let inputAnswer = document.createElement('input');
+		const tagLi = document.createElement('li');
+		const tagP = document.createElement('p');
+		const tagAnswer = document.createElement('input');
 
 		tagLi.classList.add('card');
+		btnCheck.classList.add('btn');
 		tagP.classList.add('question__text');
 		tagLi.prepend(tagP);
-		tagP.prepend(inputAnswer);
-		inputAnswer.classList.add('card__answer');
-		inputAnswer.setAttribute('autocomplete', 'off');//Remove popup hints
-		inputAnswer.before(element[key1])
-		inputAnswer.after(element[key2])
-		inputAnswer.setAttribute('data-answer', element[keyCorrect]);
+		tagLi.prepend(btnCheck);
+		tagP.prepend(tagAnswer);
+		tagAnswer.classList.add('card__answer');
+		tagAnswer.setAttribute('autocomplete', 'off');//Remove popup hints
+		tagAnswer.before(element[key1])
+		tagAnswer.after(element[key2])
+		tagAnswer.setAttribute('data-answer', element[keyCorrect]);
 		field.appendChild(tagLi);
+
 
 	});
 }
+
+//// ADD Question 
+
+function addQuestion(arr, key1, key2, keyCorrect, field) {
+	const tagLi = document.createElement('li');
+	const tagP = document.createElement('p');
+	const tagAnswer = document.createElement('input');
+
+
+	tagLi.classList.add('card');
+	tagP.classList.add('question__text');
+	tagLi.prepend(tagP);
+	tagP.prepend(tagAnswer);
+	tagAnswer.classList.add('card__answer');
+	tagAnswer.before(arr[key1])
+	tagAnswer.after(arr[key2])
+	tagAnswer.setAttribute('data-answer', arr[keyCorrect]);
+	field.appendChild(tagLi);
+
+}
+

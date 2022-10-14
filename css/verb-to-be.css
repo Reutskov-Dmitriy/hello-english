@@ -1,22 +1,51 @@
-.card__description--align {
-  margin-top: 3vh;
-}
-.form-verb {
-  font-size: 1rem;
-  line-height: 2rem;
-}
-.form-verb__answer {
+.card__answer {
   display: inline-block;
   outline: none;
   height: 30px;
   width: 100px;
-  border: 1px solid #55b7ff;
+  font-size: 1.2rem;
+  letter-spacing: 0.3px;
+  border: 1px solid #6cc3fd;
   border-radius: 10px;
-  padding: 5px;
+  padding: 5px 10px;
 }
-.form-verb__btn {
-  margin-top: 5vh;
-  display: block;
-  height: 24px;
-  width: 100px;
+.card__description--align {
+  margin-top: 3vh;
+}
+
+.amount {
+  width: 120px;
+  height: 50px;
+  position: fixed;
+  right: -125px;
+  top: 65px;
+  border-radius: 10px;
+  padding: 5px 10px;
+  background-color: rgba(196, 248, 207, 0.9);
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  transition: 1s;
+}
+.amount__mistakes {
+  color: #fd0909;
+}
+
+.task {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-rows: -webkit-max-content;
+  grid-auto-rows: max-content;
+  grid-gap: 4vh;
+}
+
+@media (min-width: 760px) {
+  .amount {
+    top: 85px;
+    width: 150px;
+    height: 80px;
+    align-items: center;
+    gap: 10px;
+    right: -205px;
+  }
 }/*# sourceMappingURL=verb-to-be.css.map */

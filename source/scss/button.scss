@@ -1,19 +1,16 @@
+@import "vars";
+
 .btn {
 	transition: 1s;
 	border: 1px solid $sky;
 	border-radius: 10px;
 	color: $white;
-	transform: scale(1);
 
 	&:hover,
 	&:active,
 	&:focus {
 		color: $white;
 		background-color: $blue;
-	}
-	&:active {
-		transform: scale(0.95);
-		transition: transform 0.3s;
 	}
 }
 
@@ -40,5 +37,14 @@
 	&:focus {
 		color: $white;
 		background-color: $darkGrey;
+	}
+}
+
+.btn-scale {
+	transform: scale(1);
+
+	&:active {
+		transform: scale(0.95);
+		transition: transform 0.3s;
 	}
 }

@@ -1,3 +1,5 @@
+@import "vars";
+
 .flex--column {
 	display: flex;
 	flex-direction: column;
@@ -10,8 +12,6 @@
 		border: 1px solid $sky;
 		background-color: $lightOrange;
 	}
-	&__answers {
-	}
 
 	&__field {
 		border: 1px solid $blue;
@@ -21,21 +21,12 @@
 		text-align: justify;
 		background-color: $skyOpasity;
 	}
-	&__phrases {
-	}
 }
 .match--grid {
 	display: grid;
 	grid-template-columns: 0.5fr 1.5fr;
 	grid-auto-rows: max-content;
 	grid-gap: 5vh;
-}
-.drag {
-	&__question {
-	}
-}
-
-.answers-list {
 }
 
 .active-card {

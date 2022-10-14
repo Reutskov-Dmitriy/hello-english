@@ -1,13 +1,52 @@
+.flex--column {
+  display: flex;
+  flex-direction: column;
+  gap: 5vh;
+}
+
+.match__phrases, .match__answers {
+  border: 1px solid #6cc3fd;
+  background-color: #f8d87e;
+}
+.match__field {
+  border: 1px solid #0b7fdf;
+  width: 100%;
+  min-height: 150px;
+  padding: 3vw;
+  text-align: justify;
+  background-color: rgba(108, 195, 253, 0.3);
+}
+
 .match--grid {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 0.5fr 1.5fr;
   grid-auto-rows: -webkit-max-content;
   grid-auto-rows: max-content;
   grid-gap: 5vh;
 }
 
+.active-card {
+  background-color: #535353;
+  box-shadow: 0 0 15px rgb(92, 247, 125);
+}
+
+.inactive-card {
+  background-color: rgba(196, 248, 207, 0.9);
+  pointer-events: none;
+}
+
+.js-correct {
+  cursor: pointer;
+  transform: scale(1);
+}
+.js-correct:active {
+  background-color: #535353;
+  transform: scale(0.95);
+  transition: transform 0.3s;
+}
+
 @media (min-width: 760px) {
   .grid3fr {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 0.5fr 1.5fr;
   }
 }/*# sourceMappingURL=find-match.css.map */

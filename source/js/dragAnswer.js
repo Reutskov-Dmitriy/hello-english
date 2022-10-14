@@ -79,7 +79,7 @@ function addQuestion(value) {
 	tagP.classList.add('question__text');
 	tagP.prepend(span);
 	span.classList.add(spanClass);
-	span.before(value.questionBeforeSpan)
+	span.before(value.questionBefore)
 	span.after(value.questionAfter)
 	document.querySelector('.js-question').appendChild(tagP)
 }
@@ -115,16 +115,16 @@ function allowDrop(event) {
 }
 
 function findElem(event) {
-	window.emptyField = emptyField = document.querySelector('.drag__empty-field');
+	emptyField = emptyField = document.querySelector('.drag__empty-field');
 
 
 	if (event.target.closest('.js-answer')) {
-		window.blockAnswer = blockAnswer = event.target.closest('.js-answer');
+		blockAnswer = blockAnswer = event.target.closest('.js-answer');
 	} else {
 		return false
 	}
 
-	dragAndDrop(event);
+	dragAndDrop(event, blockAnswer, emptyField);
 
 
 }
