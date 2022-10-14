@@ -31,6 +31,7 @@ function changeAmount(boolean, arr, key1, key2, correctAnswer) {
 		containerCheck.setAttribute('id', 'right');
 		textAnswer.innerHTML = 'Right'
 		btnNext.style.backgroundColor = 'rgb(70, 199, 98)';
+		tagP.innerHTML = ' '
 		markSpan.innerHTML = `Score: ${mark += 1}`;
 	}
 
