@@ -31,7 +31,7 @@
 }
 
 .inactive-card {
-  background-color: rgba(196, 248, 207, 0.9);
+  background-color: rgb(196, 248, 207);
   pointer-events: none;
 }
 

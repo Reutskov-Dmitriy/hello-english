@@ -97,21 +97,32 @@ h6 {
 }
 
 .amount {
-  width: 120px;
-  height: 50px;
+  width: 50vw;
+  height: 25vh;
   position: fixed;
-  right: -125px;
-  top: 65px;
+  z-index: 1;
   border-radius: 10px;
   padding: 5px 10px;
-  background-color: rgba(196, 248, 207, 0.9);
+  background-color: rgb(196, 248, 207);
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  align-items: center;
+  justify-content: space-around;
+  gap: 2vh;
   transition: 1s;
 }
 .amount__mistakes {
   color: #fd0909;
+}
+
+.amount--hide {
+  top: -30vh;
+}
+
+.amount--move {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .task {
@@ -124,12 +135,8 @@ h6 {
 
 @media (min-width: 760px) {
   .amount {
-    top: 85px;
-    width: 150px;
-    height: 80px;
     align-items: center;
     gap: 10px;
-    right: -205px;
   }
 }
 .btn {
@@ -153,7 +160,7 @@ h6 {
 #active,
 .active {
   pointer-events: all;
-  background-color: #0b7fdf;
+  background-color: #6cc3fd;
 }
 
 .btn-next {
@@ -242,6 +249,12 @@ h6 {
   background-color: #e4e4e4;
 }
 
+.amount__btn {
+  width: 100px;
+  height: 30px;
+  background-color: #6cc3fd;
+}
+
 .btn__start {
   width: 50px;
   height: 30px;
@@ -249,7 +262,7 @@ h6 {
 
 .card__btn {
   margin: 0 auto;
-  width: 100px;
+  width: 200px;
   height: 30px;
   margin-bottom: 3vh;
 }
@@ -269,7 +282,7 @@ h6 {
 }
 
 #right {
-  background-color: rgba(196, 248, 207, 0.9);
+  background-color: rgb(196, 248, 207);
   color: rgb(70, 199, 98);
 }
 
@@ -311,7 +324,7 @@ h6 {
 }
 
 .inactive-card {
-  background-color: rgba(196, 248, 207, 0.9);
+  background-color: rgb(196, 248, 207);
   pointer-events: none;
 }
 
@@ -334,6 +347,8 @@ body {
   font-family: "Open Sans", sans-serif;
   color: #252525;
   font-weight: 400;
+  width: 100vw;
+  overflow-x: hidden;
 }
 
 .container {
@@ -352,7 +367,7 @@ h3 {
 
 .header {
   position: fixed;
-  min-width: 100%;
+  min-width: 100vw;
   height: 60px;
   background-color: #6cc3fd;
 }
@@ -389,7 +404,7 @@ h3 {
   display: block;
   position: absolute;
   top: 30px;
-  right: 3vw;
+  left: 2vw;
   z-index: 999;
   width: 30px;
   height: 30px;
@@ -425,11 +440,12 @@ h3 {
   top: -8px;
 }
 .header-menu__container {
-  position: absolute;
+  position: fixed;
   top: -380px;
   left: 10%;
   right: 10%;
   height: 300px;
+  z-index: 99;
   background-color: #6cc3fd;
   transition: 1s;
 }
@@ -475,7 +491,7 @@ h3 {
 
 main {
   height: 100%;
-  width: 100%;
+  width: 100vw;
 }
 
 .levels {
@@ -546,11 +562,11 @@ main {
 .card:hover {
   box-shadow: 0 0 15px rgb(92, 247, 125);
 }
-.card_icon {
+.card__icon {
   width: 80px;
   height: 80px;
 }
-.card_icon img {
+.card__icon img {
   width: auto;
   height: auto;
 }

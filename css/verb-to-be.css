@@ -14,21 +14,32 @@
 }
 
 .amount {
-  width: 120px;
-  height: 50px;
+  width: 50vw;
+  height: 25vh;
   position: fixed;
-  right: -125px;
-  top: 65px;
+  z-index: 1;
   border-radius: 10px;
   padding: 5px 10px;
-  background-color: rgba(196, 248, 207, 0.9);
+  background-color: rgb(196, 248, 207);
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  align-items: center;
+  justify-content: space-around;
+  gap: 2vh;
   transition: 1s;
 }
 .amount__mistakes {
   color: #fd0909;
+}
+
+.amount--hide {
+  top: -30vh;
+}
+
+.amount--move {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .task {
@@ -41,11 +52,7 @@
 
 @media (min-width: 760px) {
   .amount {
-    top: 85px;
-    width: 150px;
-    height: 80px;
     align-items: center;
     gap: 10px;
-    right: -205px;
   }
 }/*# sourceMappingURL=verb-to-be.css.map */

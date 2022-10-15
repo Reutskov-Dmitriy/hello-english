@@ -13,11 +13,11 @@ import deleteAnswer from "./module/fun-delete-answer.js";
 
 const btnCheck = document.querySelector('.card__btn');
 const btnNext = document.querySelector('.btn-next');
-const btnStart = document.getElementById('button-start');
+const btnStart = document.querySelector('.btn__start');
 const containerCheck = document.querySelector('.card__check')
 const answersList = document.querySelector('.js-answers');
 const ulField = document.querySelector('.js-question');
-const chunks = getRandomChunks(toBePastArr, 10);
+const chunks = getRandomChunks(toBePastArr, 2);
 let index = 0;
 
 
@@ -26,17 +26,19 @@ btnNext.onclick = changeQuestion;
 btnCheck.onclick = checkInsertedAttribute;
 
 function startTask() {
-	btnStart.setAttribute('id', 'inactive1')
+	btnStart.classList.remove('active');
+	btnStart.classList.add('inactive');
 	deleteQuestion(ulField, index);
 	deleteAnswer(answersList, index);
 	index = 0;
 	changeQuestion();
-	amountDiv.style.right = '5px';
+
 }
 
 function changeQuestion() {
 	btnCheck.classList.remove('active');
 	btnCheck.classList.add('inactive');
+	// btnCheck.setAttribute('id', 'inactive1');
 	if (index < chunks[0].length) {
 		deleteQuestion(ulField, index);
 		deleteAnswer(answersList, index);
@@ -45,7 +47,9 @@ function changeQuestion() {
 
 		allowDragAndDrop();
 	}
-	else if (index > toBePastArr.length) {
+	else {
+		amountDiv.classList.remove('amount--hide');
+		amountDiv.classList.add('amount--move');
 		index = 0
 	}
 	containerCheck.style.bottom = '-30vh';

@@ -45,6 +45,7 @@ function allowDragAndDrop() {
 		this.append(draggedAnswer)
 		this.classList.remove('stuck')
 		draggedAnswer.setAttribute('id', 'check-answer')
+		// btnCheck.setAttribute('id', 'active');
 		btnCheck.classList.remove('inactive');
 		btnCheck.classList.add('active');
 	}
@@ -52,11 +53,11 @@ function allowDragAndDrop() {
 	function dragDropBack() {
 		this.append(draggedAnswer)
 		this.classList.remove('stuck')
-		btnCheck.classList.remove('active');
-		btnCheck.classList.add('inactive');
-
+		if (this.append(draggedAnswer)) {
+			btnCheck.classList.remove('active');
+			btnCheck.classList.add('inactive');
+		}
 		// btnCheck.setAttribute('id', 'inactive1');
-
 	}
 
 	sells.forEach((sell) => {

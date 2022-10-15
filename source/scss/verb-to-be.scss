@@ -1,14 +1,6 @@
 @import "vars";
 
 .card {
-	&__title {
-	}
-
-	&__title--align {
-	}
-
-	&__ask {
-	}
 	&__answer {
 		display: inline-block;
 		outline: none;
@@ -21,33 +13,38 @@
 		padding: 5px 10px;
 	}
 
-	&__description {
-	}
-
 	&__description--align {
 		margin-top: 3vh;
 	}
 }
 
 .amount {
-	width: 120px;
-	height: 50px;
+	width: 50vw;
+	height: 25vh;
 	position: fixed;
-	right: -125px;
-	top: 65px;
+	z-index: 1;
 	border-radius: 10px;
 	padding: 5px 10px;
 	background-color: $lightsalat;
 	display: flex;
 	flex-direction: column;
-	gap: 5px;
+	align-items: center;
+	justify-content: space-around;
+	gap: 2vh;
 	transition: 1s;
-	&__mark {
-	}
 
 	&__mistakes {
 		color: $red;
 	}
+}
+
+.amount--hide {
+	top: -30vh;
+}
+.amount--move {
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
 }
 
 .task {
@@ -59,11 +56,7 @@
 
 @media (min-width: 760px) {
 	.amount {
-		top: 85px;
-		width: 150px;
-		height: 80px;
 		align-items: center;
 		gap: 10px;
-		right: -205px;
 	}
 }

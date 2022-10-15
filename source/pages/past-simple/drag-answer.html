@@ -53,9 +53,10 @@
 					</div>
 				</div>
 				<ul class="cards-list">
-					<div class="amount">
+					<div class="amount amount--hide">
 						<span class="amount__mark">Score: 0</span>
 						<span class="amount__mistakes">Mistakes: 0</span>
+						<button class="amount__btn btn">Next Task</button>
 					</div>
 					<li class="card">
 						<div class="card__items">
@@ -66,7 +67,7 @@
 								<h3 class="card__title card__title--align">Drag and drop phrases and words</h3>
 								<p class="card__description card__description--align"></p>
 							</div>
-							<button id="button-start" class="btn btn__start">Start</button>
+							<button class="btn btn__start active">Start</button>
 						</div>
 
 						<section class="drag">
@@ -76,7 +77,7 @@
 							</div>
 						</section>
 					</li>
-					<button class="card__btn  btn active">Check</button>
+					<button class="card__btn  btn inactive">Check</button>
 					<div class="card__check check">
 						<h3 class="check__title">Right!</h3>
 						<p class="check__answer"></p>

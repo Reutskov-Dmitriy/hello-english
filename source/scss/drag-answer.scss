@@ -68,13 +68,19 @@
 .stuck {
 	background-color: $lightGray;
 }
+
+.amount__btn {
+	width: 100px;
+	height: 30px;
+	background-color: $sky;
+}
 .btn__start {
 	width: 50px;
 	height: 30px;
 }
 .card__btn {
 	margin: 0 auto;
-	width: 100px;
+	width: 200px;
 	height: 30px;
 	margin-bottom: 3vh;
 }

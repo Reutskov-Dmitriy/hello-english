@@ -29,7 +29,8 @@ function generationTask() {
 
 	} else {
 		containerCheck.style.bottom = '-30vh';
-		amountDiv.style.right = '5px';
+		amountDiv.classList.remove('amount--hide');
+		amountDiv.classList.add('amount--move');
 		return false
 	}
 }
