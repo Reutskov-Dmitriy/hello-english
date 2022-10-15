@@ -1,14 +1,12 @@
-export default allowDragAndDrop;
 
-// const question = document.querySelector('.js-question');
+export { draggedAnswer, emptyField, allowDragAndDrop }
 const btnCheck = document.querySelector('.card__btn');
 const answersList = document.querySelector('.js-answers');
-
-
+let draggedAnswer
+let emptyField
 function allowDragAndDrop() {
 	const sells = document.querySelectorAll('.js-sell')
-
-	const emptyField = document.querySelector('.drag__empty-field')
+	emptyField = document.querySelector('.drag__empty-field')
 	const dragStart = function () {
 		draggedAnswer = this
 		setTimeout(() => {
@@ -20,17 +18,10 @@ function allowDragAndDrop() {
 		this.classList.remove('hide');
 	}
 
-	let draggedAnswer
-
-
 	for (const blockAnswer of answersList.children) {
-
-
-
 		blockAnswer.addEventListener('dragstart', dragStart);
 		blockAnswer.addEventListener('dragend', dragEnd);
 	}
-
 
 
 	const dragOver = function (event) {
@@ -46,7 +37,6 @@ function allowDragAndDrop() {
 	}
 
 
-
 	function dragLeave() {
 		this.classList.remove('stuck')
 	}
@@ -56,15 +46,12 @@ function allowDragAndDrop() {
 		this.classList.remove('stuck')
 		draggedAnswer.setAttribute('id', 'check-answer')
 		btnCheck.classList.remove('inactive');
-
 		btnCheck.classList.add('active');
 	}
 
 	function dragDropBack() {
-
 		this.append(draggedAnswer)
 		this.classList.remove('stuck')
-		draggedAnswer.setAttribute('id', 'none')
 		btnCheck.classList.remove('active');
 		btnCheck.classList.add('inactive');
 
@@ -75,7 +62,6 @@ function allowDragAndDrop() {
 	sells.forEach((sell) => {
 		sell.addEventListener('dragover', dragOver);
 		sell.addEventListener('dragenter', dragEnter);
-
 		sell.addEventListener('dragleave', dragLeave);
 		sell.addEventListener('drop', dragDrop);
 		sell.addEventListener('drop', dragDropBack);

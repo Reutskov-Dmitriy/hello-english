@@ -144,7 +144,8 @@ h6 {
 }
 
 #inactive1,
-#inactive2 {
+#inactive2,
+.inactive {
   pointer-events: none;
   background-color: #e4e4e4;
 }

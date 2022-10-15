@@ -69,9 +69,7 @@ sectionDrag.addEventListener('touchstart', findElem);
 answersList.ondragover = allowDrop;
 
 
-function allowDrop(event) {
-	event.preventDefault();
-}
+
 
 function findElem(event) {
 	emptyField = document.querySelector('.drag__empty-field');
@@ -84,6 +82,5 @@ function findElem(event) {
 	}
 
 	allowDragAndDrop(event, blockAnswer, emptyField);
-
 
 }
