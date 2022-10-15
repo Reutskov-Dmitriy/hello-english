@@ -3,8 +3,8 @@
 import { correctOptionsPresent } from "./module/phrases-present-simple.js";
 import getRandomChunks from "./module/fun-get-random-chunks.js";
 import { renderQuestionFieldDiv } from "./module/fun-render-question.js";
-import { renderAnswer } from "./module/fun-render-answer.js";
-import dragAndDrop from "./module/function-drag-and-drop.js";
+import { renderAnswers } from "./module/fun-render-answer.js";
+import allowDragAndDrop from "./module/function-drag-and-drop.js";
 import { amountDiv, markSpan, mistakesSpan, mark, mistakes, changeAmount } from "./module/changeAmount.js";
 import deleteQuestion from "./module/fun-delete-question.js";
 import deleteAnswer from "./module/fun-delete-answer.js";
@@ -45,7 +45,7 @@ function generationTask() {
 		deleteQuestion(question, index);
 		deleteAnswer(answersList, index)
 		renderQuestionFieldDiv(chunks[0], 'questionBefore', 'questionAfter', 'correctAnswer', question);
-		renderAnswer(chunks[0], 'answerOptions', answersList)
+		renderAnswers(chunks[0], 'answerOptions', answersList)
 	}
 	else {
 		btnStart.setAttribute('id', 'active1')
@@ -83,7 +83,7 @@ function findElem(event) {
 		return false
 	}
 
-	dragAndDrop(event, blockAnswer, emptyField);
+	allowDragAndDrop(event, blockAnswer, emptyField);
 
 
 }

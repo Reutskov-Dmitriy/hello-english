@@ -1,14 +1,17 @@
 'use strict'
+import { renderQuestions } from "./module/fun-render-question.js";
+import { renderAnswers } from "./module/fun-render-answer.js";
 import { toBePastArr } from './module/phrases-past-simple.js';
+import getRandomChunks from "./module/fun-get-random-chunks.js";
+
 import { amountDiv, markSpan, mistakesSpan, mark, mistakes, changeAmount } from "./module/changeAmount.js";
-import dragAndDrop, { question } from './module/function-drag-and-drop.js';
+import allowDragAndDrop from './module/function-drag-and-drop.js';
 import concatString from './module/function-concat-sting.js';
 
 const btnCheck = document.querySelector('.card__btn');
 const btnNext = document.querySelector('.btn-next');
 const btnStart = document.getElementById('button-start');
 const containerCheck = document.querySelector('.card__check')
-let divAnswer
 let tagP
 const spanClass = 'drag__empty-field';
 let index = 0;
@@ -17,8 +20,12 @@ let index = 0;
 
 const sectionDrag = document.querySelector('.drag');
 const answersList = document.querySelector('.js-answers');
-let emptyField
-let blockAnswer
+const ulField = document.querySelector('.js-question');
+
+const chunks = getRandomChunks(toBePastArr, 10);
+
+let emptyField, blockAnswer
+
 
 btnStart.onclick = startTask;
 btnNext.onclick = changeQuestion;
@@ -34,11 +41,13 @@ function startTask() {
 
 function changeQuestion() {
 	btnCheck.setAttribute('id', 'inactive1');
-
-	if (index <= toBePastArr.length + 1) {
+	console.log(chunks[0][index])
+	if (index < chunks[0].length) {
 		checkDelete();
-		addQuestion(toBePastArr[index]);
-		addAnswer(toBePastArr[index]);
+		renderQuestions(chunks[0][index], 'questionBefore', 'questionAfter', 'correctAnswer', ulField,);
+		renderAnswers(chunks[0][index], 'answerOptions', answersList);
+
+		allowDragAndDrop();
 	}
 	else if (index > toBePastArr.length) {
 		index = 0
@@ -51,7 +60,7 @@ function checkInsertedAttribute() {
 	const correct = concatString(toBePastArr[index].correctAnswer[0])
 	const idCheckAnswer = document.getElementById('check-answer')
 	let resultBoolean = concatString(idCheckAnswer.getAttribute('data-answer')) == (correct);
-	changeAmount(resultBoolean)
+	changeAmount(resultBoolean, chunks[0][index], 'questionBefore', 'questionAfter', 'correctAnswer')
 	index++;
 }
 
@@ -70,61 +79,32 @@ function checkDelete() {
 }
 
 
-// Render question 
 
-function addQuestion(value) {
-	tagP = document.createElement('p');
-	let span = document.createElement('span');
 
-	tagP.classList.add('question__text');
-	tagP.prepend(span);
-	span.classList.add(spanClass);
-	span.before(value.questionBefore)
-	span.after(value.questionAfter)
-	document.querySelector('.js-question').appendChild(tagP)
-}
-// Render answer
-function addAnswer(value) {
-	value.answerOptions.forEach((e) => {
-		divAnswer = document.createElement('div');
-		let pAnswer = document.createElement('p')
-
-		divAnswer.setAttribute('draggable', 'true');
-		divAnswer.classList.add('drag__answer');
-		divAnswer.classList.add('js-answer');
-		divAnswer.setAttribute('data-answer', e);
-
-		divAnswer.prepend(pAnswer);
-		pAnswer.classList.add('answer__text');
-		pAnswer.innerHTML = e;
-
-		document.querySelector('.answers-list').appendChild(divAnswer);
-
-	})
-}
 
 // Drag and drop phrases and words
 
-sectionDrag.addEventListener('mousedown', findElem);
-sectionDrag.addEventListener('touchstart', findElem);
-answersList.ondragover = allowDrop;
+// sectionDrag.addEventListener('mousedown', findElem);
+// sectionDrag.addEventListener('touchstart', findElem);
 
+
+answersList.ondragover = allowDrop;
 
 function allowDrop(event) {
 	event.preventDefault();
 }
 
 function findElem(event) {
-	emptyField = emptyField = document.querySelector('.drag__empty-field');
+	emptyField = document.querySelector('.drag__empty-field');
 
-
-	if (event.target.closest('.js-answer')) {
-		blockAnswer = blockAnswer = event.target.closest('.js-answer');
+	const answerEl = event.target.closest('.js-answer');
+	if (answerEl) {
+		blockAnswer = answerEl;
 	} else {
 		return false
 	}
 
-	dragAndDrop(event, blockAnswer, emptyField);
+	allowDragAndDrop(blockAnswer, emptyField);
 
 
 }

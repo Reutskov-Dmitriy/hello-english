@@ -1,4 +1,4 @@
-export default dragAndDrop;
+export default allowDragAndDrop;
 export { question };
 
 const question = document.querySelector('.js-question');
@@ -6,27 +6,33 @@ const btnCheck = document.querySelector('.card__btn');
 const answersList = document.querySelector('.js-answers');
 
 
-function dragAndDrop(event, blockAnswer, emptyField) {
-
+function allowDragAndDrop() {
+	const emptyField = document.querySelector('.drag__empty-field')
 	const dragStart = function () {
+		draggedAnswer = this
 		setTimeout(() => {
 			this.classList.add('hide');
 		}, 0)
-		// this.classList.add('hide');
-
 	}
 
 	const dragEnd = function () {
 		this.classList.remove('hide');
-
 	}
 
-	blockAnswer.addEventListener('dragstart', dragStart);
-	blockAnswer.addEventListener('dragend', dragEnd);
+	let draggedAnswer
+
+
+	for (const blockAnswer of answersList.children) {
+
+
+
+		blockAnswer.addEventListener('dragstart', dragStart);
+		blockAnswer.addEventListener('dragend', dragEnd);
+	}
 	// blockAnswer.addEventListener('touchstart', myToush);
 
 
-	question.addEventListener('dragover', dragOver);
+	answersList.addEventListener('dragover', dragOver);
 	question.addEventListener('dragenter', dragEnter);
 	question.addEventListener('dragleave', dragLeave);
 	emptyField.addEventListener('dragenter', dragEnterField);
@@ -37,13 +43,11 @@ function dragAndDrop(event, blockAnswer, emptyField) {
 		event.preventDefault();
 	}
 
-	function dragEnter(event) {
-		event.preventDefault();
+	function dragEnter() {
 		this.classList.add('stuck')
 	}
 
-	function dragEnterField(event) {
-		event.preventDefault();
+	function dragEnterField() {
 		this.classList.add('stuck')
 	}
 
@@ -51,26 +55,25 @@ function dragAndDrop(event, blockAnswer, emptyField) {
 		this.classList.remove('stuck')
 	}
 
-	function dragDrop(event) {
-
-		this.append(blockAnswer)
+	function dragDrop() {
+		this.append(draggedAnswer)
 		this.classList.remove('stuck')
-		blockAnswer.setAttribute('id', 'check-answer')
+		draggedAnswer.setAttribute('id', 'check-answer')
 		btnCheck.setAttribute('id', 'active');
 	}
 
-	function dragDropBack(event) {
+	function dragDropBack() {
 
-		this.append(blockAnswer)
+		this.append(draggedAnswer)
 		this.classList.remove('stuck')
-		blockAnswer.setAttribute('id', 'none')
+		draggedAnswer.setAttribute('id', 'none')
 
 		btnCheck.setAttribute('id', 'inactive1');
 
 	}
 
-	function myToush(e) {
-		e.preventDefault();
-	}
+	// function myTouch(event) {
+	// 	event.preventDefault();
+	// }
 
 }

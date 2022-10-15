@@ -17,7 +17,6 @@ let index = 0;
 let inputAnswer
 
 const chunks = getRandomChunks(formVerbFuture, 10);
-console.log(chunks)
 
 generationTask();
 

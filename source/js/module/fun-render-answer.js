@@ -1,6 +1,6 @@
 "use strickt"
 
-export { addAnswer, renderAnswer };
+export { addAnswer, renderAnswers };
 
 
 
@@ -27,24 +27,21 @@ function addAnswer(arr, key, keyCorrect, field) {
 
 
 
-function renderAnswer(arr, key, field) {
-	arr.forEach((e) => {
-		e[key].forEach((elem) => {
-			let divAnswer = document.createElement('div');
-			let pAnswer = document.createElement('p')
+function renderAnswers(arr, key, field) {
+	arr[key].forEach((elem) => {
 
-			divAnswer.setAttribute('draggable', 'true');
-			divAnswer.classList.add('drag__answer');
-			divAnswer.classList.add('js-answer');
-			divAnswer.setAttribute('data-answer', elem);
+		let divAnswer = document.createElement('div');
+		let pAnswer = document.createElement('p')
 
-			divAnswer.prepend(pAnswer);
-			pAnswer.classList.add('answer__text');
-			pAnswer.innerHTML = elem;
-			field.appendChild(divAnswer);
-		})
+		divAnswer.setAttribute('draggable', 'true');
+		divAnswer.classList.add('drag__answer');
+		divAnswer.classList.add('js-answer');
+		divAnswer.setAttribute('data-answer', elem);
 
-
+		divAnswer.prepend(pAnswer);
+		pAnswer.classList.add('answer__text');
+		pAnswer.innerHTML = elem;
+		field.appendChild(divAnswer);
 
 	})
 }
