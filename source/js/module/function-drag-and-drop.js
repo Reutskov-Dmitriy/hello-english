@@ -1,12 +1,13 @@
 export default allowDragAndDrop;
-export { question };
 
-const question = document.querySelector('.js-question');
+// const question = document.querySelector('.js-question');
 const btnCheck = document.querySelector('.card__btn');
 const answersList = document.querySelector('.js-answers');
 
 
 function allowDragAndDrop() {
+	const sells = document.querySelectorAll('.js-sell')
+
 	const emptyField = document.querySelector('.drag__empty-field')
 	const dragStart = function () {
 		draggedAnswer = this
@@ -29,27 +30,22 @@ function allowDragAndDrop() {
 		blockAnswer.addEventListener('dragstart', dragStart);
 		blockAnswer.addEventListener('dragend', dragEnd);
 	}
-	// blockAnswer.addEventListener('touchstart', myToush);
 
 
-	answersList.addEventListener('dragover', dragOver);
-	question.addEventListener('dragenter', dragEnter);
-	question.addEventListener('dragleave', dragLeave);
-	emptyField.addEventListener('dragenter', dragEnterField);
-	emptyField.addEventListener('drop', dragDrop);
-	answersList.addEventListener('drop', dragDropBack);
 
-	function dragOver(event) {
+	const dragOver = function (event) {
+		console.log("over")
 		event.preventDefault();
 	}
 
-	function dragEnter() {
+	const dragEnter = function (event) {
+		console.log("enter")
+
+		event.preventDefault();
 		this.classList.add('stuck')
 	}
 
-	function dragEnterField() {
-		this.classList.add('stuck')
-	}
+
 
 	function dragLeave() {
 		this.classList.remove('stuck')
@@ -59,7 +55,9 @@ function allowDragAndDrop() {
 		this.append(draggedAnswer)
 		this.classList.remove('stuck')
 		draggedAnswer.setAttribute('id', 'check-answer')
-		btnCheck.setAttribute('id', 'active');
+		btnCheck.classList.remove('inactive');
+
+		btnCheck.classList.add('active');
 	}
 
 	function dragDropBack() {
@@ -67,13 +65,20 @@ function allowDragAndDrop() {
 		this.append(draggedAnswer)
 		this.classList.remove('stuck')
 		draggedAnswer.setAttribute('id', 'none')
+		btnCheck.classList.remove('active');
+		btnCheck.classList.add('inactive');
 
-		btnCheck.setAttribute('id', 'inactive1');
+		// btnCheck.setAttribute('id', 'inactive1');
 
 	}
 
-	// function myTouch(event) {
-	// 	event.preventDefault();
-	// }
+	sells.forEach((sell) => {
+		sell.addEventListener('dragover', dragOver);
+		sell.addEventListener('dragenter', dragEnter);
+
+		sell.addEventListener('dragleave', dragLeave);
+		sell.addEventListener('drop', dragDrop);
+		sell.addEventListener('drop', dragDropBack);
+	})
 
 }

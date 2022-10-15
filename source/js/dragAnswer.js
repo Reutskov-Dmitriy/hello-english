@@ -40,7 +40,7 @@ function startTask() {
 }
 
 function changeQuestion() {
-	btnCheck.setAttribute('id', 'inactive1');
+	btnCheck.classList.add('inactive');
 	console.log(chunks[0][index])
 	if (index < chunks[0].length) {
 		checkDelete();
@@ -84,30 +84,9 @@ function checkDelete() {
 
 // Drag and drop phrases and words
 
-// sectionDrag.addEventListener('mousedown', findElem);
-// sectionDrag.addEventListener('touchstart', findElem);
 
 
-answersList.ondragover = allowDrop;
 
-function allowDrop(event) {
-	event.preventDefault();
-}
-
-function findElem(event) {
-	emptyField = document.querySelector('.drag__empty-field');
-
-	const answerEl = event.target.closest('.js-answer');
-	if (answerEl) {
-		blockAnswer = answerEl;
-	} else {
-		return false
-	}
-
-	allowDragAndDrop(blockAnswer, emptyField);
-
-
-}
 
 
 
