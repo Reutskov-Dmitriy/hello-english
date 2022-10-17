@@ -17,7 +17,7 @@
   width: 100px;
   height: 30px;
   text-align: center;
-  border: 1px solid #6cc3fd;
+  border: 1px solid rgb(0, 149, 243);
   border-radius: 10px;
 }
 .drag__answer {
@@ -27,9 +27,9 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  border: 1px solid #6cc3fd;
+  border: 1px solid rgb(0, 149, 243);
   border-radius: 10px;
-  background-color: #6cc3fd;
+  background-color: rgb(0, 149, 243);
   color: #fff;
   padding: 5px;
   cursor: move;
@@ -47,7 +47,7 @@
   gap: 2vw;
   justify-content: center;
   align-items: center;
-  border: 1px solid #6cc3fd;
+  border: 1px solid rgb(0, 149, 243);
 }
 
 .answer__text {
@@ -65,7 +65,7 @@
 .amount__btn {
   width: 100px;
   height: 30px;
-  background-color: #6cc3fd;
+  background-color: rgb(0, 149, 243);
 }
 
 .btn__start {

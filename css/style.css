@@ -88,7 +88,7 @@ h6 {
   width: 100px;
   font-size: 1.2rem;
   letter-spacing: 0.3px;
-  border: 1px solid #6cc3fd;
+  border: 1px solid rgb(0, 149, 243);
   border-radius: 10px;
   padding: 5px 10px;
 }
@@ -141,13 +141,13 @@ h6 {
 }
 .btn {
   transition: 1s;
-  border: 1px solid #6cc3fd;
+  border: 1px solid rgb(0, 149, 243);
   border-radius: 10px;
   color: #fff;
 }
 .btn:hover, .btn:active, .btn:focus {
   color: #fff;
-  background-color: #0b7fdf;
+  background-color: #0f65aa;
 }
 
 #inactive1,
@@ -160,7 +160,7 @@ h6 {
 #active,
 .active {
   pointer-events: all;
-  background-color: #6cc3fd;
+  background-color: rgb(0, 149, 243);
 }
 
 .btn-next {
@@ -203,7 +203,7 @@ h6 {
   width: 100px;
   height: 30px;
   text-align: center;
-  border: 1px solid #6cc3fd;
+  border: 1px solid rgb(0, 149, 243);
   border-radius: 10px;
 }
 .drag__answer {
@@ -213,9 +213,9 @@ h6 {
   justify-content: center;
   align-items: center;
   text-align: center;
-  border: 1px solid #6cc3fd;
+  border: 1px solid rgb(0, 149, 243);
   border-radius: 10px;
-  background-color: #6cc3fd;
+  background-color: rgb(0, 149, 243);
   color: #fff;
   padding: 5px;
   cursor: move;
@@ -233,7 +233,7 @@ h6 {
   gap: 2vw;
   justify-content: center;
   align-items: center;
-  border: 1px solid #6cc3fd;
+  border: 1px solid rgb(0, 149, 243);
 }
 
 .answer__text {
@@ -251,7 +251,7 @@ h6 {
 .amount__btn {
   width: 100px;
   height: 30px;
-  background-color: #6cc3fd;
+  background-color: rgb(0, 149, 243);
 }
 
 .btn__start {
@@ -297,11 +297,11 @@ h6 {
 }
 
 .match__phrases, .match__answers {
-  border: 1px solid #6cc3fd;
+  border: 1px solid rgb(0, 149, 243);
   background-color: #f8d87e;
 }
 .match__field {
-  border: 1px solid #0b7fdf;
+  border: 1px solid #0f65aa;
   width: 100%;
   min-height: 150px;
   padding: 3vw;
@@ -364,7 +364,7 @@ h3 {
   position: fixed;
   min-width: 100%;
   height: 60px;
-  background-color: #6cc3fd;
+  background-color: rgb(0, 149, 243);
 }
 
 .header-menu {
@@ -378,7 +378,7 @@ h3 {
   position: absolute;
   z-index: 998;
   text-align: center;
-  background-color: #6cc3fd;
+  background-color: rgb(0, 149, 243);
 }
 .header-menu__checkbox:checked ~ .header-menu__container {
   top: 0;
@@ -441,7 +441,7 @@ h3 {
   right: 10%;
   height: 300px;
   z-index: 99;
-  background-color: #6cc3fd;
+  background-color: rgb(0, 149, 243);
   transition: 1s;
 }
 .header-menu__items {
@@ -474,6 +474,9 @@ h3 {
   color: #535353;
   padding: 1vw;
 }
+.logo__title a:hover {
+  box-shadow: 0 0 35px #535353;
+}
 .logo__title--position {
   position: absolute;
   left: 50%;
@@ -487,6 +490,30 @@ h3 {
 @media (min-width: 760px) {
   .header {
     height: 80px;
+  }
+  .header-menu__container {
+    position: fixed;
+    top: 0;
+    left: 30%;
+    right: 20%;
+    height: 80px;
+    z-index: 99;
+    background-color: rgb(0, 149, 243);
+    transition: 1s;
+  }
+  .header-menu__items {
+    width: 100%;
+    height: 100%;
+    margin-top: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 4vh;
+    line-height: 1.25rem;
+  }
+  .header-menu__logo {
+    width: 30vw;
   }
 }
 main {
@@ -522,14 +549,14 @@ main {
   font-family: "Source Sans Pro", sans-serif;
   transition: 1s;
   border-radius: 10px;
-  border: 1px solid #6cc3fd;
+  border: 1px solid rgb(0, 149, 243);
 }
 .toggle div a:hover, .toggle div a:active, .toggle div a:focus {
-  background-color: #6cc3fd;
+  background-color: rgb(0, 149, 243);
   color: #fff;
 }
 .toggle__beginer:visited {
-  background-color: #6cc3fd;
+  background-color: rgb(0, 149, 243);
 }
 .toggle__intermediate {
   pointer-events: none;
@@ -558,7 +585,7 @@ main {
   padding: 2vh;
   width: 100%;
   height: 100%;
-  border: 1px solid #6cc3fd;
+  border: 1px solid rgb(0, 149, 243);
   border-radius: 10px;
   transition: 0.5s;
 }
@@ -630,19 +657,76 @@ main {
   }
 }
 .footer {
+  padding: 3vw;
   position: relative;
   width: 100%;
-  height: 30vh;
-  background: url(../../assets/images/sky-blue-footer.png) 0 0/cover no-repeat;
+  height: 200px;
+  background: url(../../assets/images/white-cloud-blue-sky.jpg) 0 0/cover no-repeat;
 }
 .footer__column {
   width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
+  align-items: center;
+}
+.footer__row {
+  width: 100%;
+  height: 5vh;
+  display: flex;
+  justify-content: space-around;
   align-items: center;
 }
 .footer__copyright {
-  margin-top: 40px;
+  align-self: flex-end;
+}
+
+.social {
+  display: flex;
+  gap: 20px;
+}
+.social ._icon-facebook {
+  position: relative;
+}
+.social ._icon-facebook::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.social ._icon-twitter {
+  position: relative;
+}
+.social ._icon-twitter::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.social ._icon-instagram {
+  position: relative;
+}
+.social ._icon-instagram::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.social li {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #535353;
+  border-radius: 50%;
+  transition: 1s;
+}
+.social li:hover {
+  cursor: pointer;
+  border: 1px solid #55b7ff;
+  color: #55b7ff;
+  background-color: #fff;
+}
+.social li a {
+  width: 100%;
+  height: 100%;
 }/*# sourceMappingURL=style.css.map */

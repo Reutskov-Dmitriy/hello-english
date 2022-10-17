@@ -162,6 +162,7 @@ h3 {
 			padding: 1vw;
 			&:hover {
 				// transform: translate(23px, 12px);
+				box-shadow: 0 0 35px $darkGrey;
 			}
 		}
 	}
@@ -180,6 +181,32 @@ h3 {
 @media (min-width: 760px) {
 	.header {
 		height: 80px;
+	}
+	.header-menu {
+		&__container {
+			position: fixed;
+			top: 0;
+			left: 30%;
+			right: 20%;
+			height: 80px;
+			z-index: 99;
+			background-color: $sky;
+			transition: 1s;
+		}
+		&__items {
+			width: 100%;
+			height: 100%;
+			margin-top: 0;
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+			gap: 4vh;
+			line-height: 1.25rem;
+		}
+		&__logo {
+			width: 30vw;
+		}
 	}
 }
 
@@ -356,37 +383,84 @@ main {
 // Footer
 
 .footer {
+	padding: 3vw;
 	position: relative;
 	width: 100%;
-	height: 30vh;
+	height: 200px;
 	// color: #ffffff;
-	background: url(../../assets/images/sky-blue-footer.png) 0 0 / cover no-repeat;
-	// &::before {
-	// 	content: "";
-	// 	width: 100vw;
-	// 	height: 30vh;
-	// 	&:hover {
-	// 		&::after {
-	// 			background: linear-gradient(251.06deg, rgb(126, 90, 255, 0) 42.19%, rgb(85, 183, 255, 0) 80.21%);
-	// 	}
-	// 	background: linear-gradient(251.06deg, rgb(126, 90, 255, 0.55) 42.19%, rgb(85, 183, 255, 0.46) 80.21%);
+	background: url(../../assets/images/white-cloud-blue-sky.jpg) 0 0 / cover no-repeat;
 
-	// 	position: absolute;
-	// 	z-index: 1;
-	// }
 	&__column {
 		width: 100%;
 		height: 100%;
 		display: flex;
 		flex-direction: column;
-		justify-content: center;
+		justify-content: space-around;
 		align-items: center;
 	}
 
 	&__logo {
 	}
 
+	&__row {
+		width: 100%;
+		height: 5vh;
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+	}
+
 	&__copyright {
-		margin-top: 40px;
+		align-self: flex-end;
+	}
+}
+.social {
+	display: flex;
+	gap: 20px;
+
+	._icon-facebook {
+		position: relative;
+		&::before {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+	}
+	._icon-twitter {
+		position: relative;
+		&::before {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+	}
+	._icon-instagram {
+		position: relative;
+		&::before {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+	}
+	& li {
+		width: 40px;
+		height: 40px;
+		border: 1px solid $darkGrey;
+		border-radius: 50%;
+		transition: 1s;
+		&:hover {
+			cursor: pointer;
+			border: 1px solid $lightsky;
+			color: $lightsky;
+			background-color: $white;
+		}
+
+		& a {
+			width: 100%;
+			height: 100%;
+		}
 	}
 }

@@ -5,11 +5,11 @@
 }
 
 .match__phrases, .match__answers {
-  border: 1px solid #6cc3fd;
+  border: 1px solid rgb(0, 149, 243);
   background-color: #f8d87e;
 }
 .match__field {
-  border: 1px solid #0b7fdf;
+  border: 1px solid #1a87e0;
   width: 100%;
   min-height: 150px;
   padding: 3vw;
