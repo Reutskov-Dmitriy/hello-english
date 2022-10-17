@@ -3,9 +3,8 @@
 .drag {
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
 	min-width: 80vw;
-	height: 50vh;
+	height: auto;
 	padding: 5px 0;
 
 	&__question {

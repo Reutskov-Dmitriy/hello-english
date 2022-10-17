@@ -6,8 +6,8 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="../../../css/style.css">
-	<script type="module" src="../../../source/js/dragAnswer.js"></script>
-	<title>hello english</title>
+
+	<title>Matching</title>
 </head>
 
 <body>
@@ -30,11 +30,6 @@
 					<li class="header-menu__item"><a href="#" class="header-menu__link">Contact Us</a></li>
 				</ul>
 			</div>
-			<div class="amount amount--hide">
-				<span class="amount__mark">Score: 0</span>
-				<span class="amount__mistakes">Mistakes: 0</span>
-				<button class="amount__btn btn">Next Task</button>
-			</div>
 		</nav>
 	</header>
 
@@ -50,44 +45,64 @@
 					<div class="toggle__beginer">
 						<a href="../../../index.html">Beginner</a>
 					</div>
-					<div class="toggle__presentSimp">
-						<a href="../../pages/past-simple/past-simple.html">Past simple</a>
+					<div class="toggle__futureSimp">
+						<a href="#">Matching</a>
 					</div>
 					<div class="toggle__advanced">
 						<a href="#"></a>
 					</div>
 				</div>
-				<ul class="cards-list">
 
-					<li class="card js-arrPast">
-						<div class="card__items">
-							<figure class="card__icon">
-								<img src="../../../assets/images/icons/time/drag_drop_icon.svg" alt="drag the words">
-							</figure>
-							<div class="card__text">
-								<h3 class="card__title card__title--align">Drag and drop phrases and words</h3>
-								<p class="card__description card__description--align"></p>
+				<ul id="beginer-task" class="cards-list cards-list--grid">
+					<li class="card ">
+						<a href="../../../source/pages/matching/pictures-bathroom.html" class="card__link">
+							<div class="card__items">
+								<figure class="card__icon ">
+									<img src="../../../assets/images/icons/match/bathroom.svg" alt="Verb to be">
+								</figure>
+								<div class="card__text">
+									<h3 class="card__title">Prepositions</h3>
+									<p class="card__description">(bathroom)</p>
+								</div>
 							</div>
-							<button class="btn btn__start active">Start</button>
-						</div>
-
-						<section class="drag">
-							<div class="drag__question js-question ">
-							</div>
-							<div class="answers-list js-answers js-sell">
-							</div>
-						</section>
+						</a>
 					</li>
-					<button class="card__btn  btn inactive">Check</button>
-					<div class="card__check check">
-						<h3 class="check__title">Right!</h3>
-						<p class="check__answer"></p>
-						<button class="check__btn btn-next ">Next</button>
-					</div>
+
+					<li class="card">
+						<a href="../../pages/matching/pictures-kitchen.html" class="card__link">
+							<div class="card__items">
+								<figure class="card__icon">
+									<img src="../../../assets/images/icons/match/kitchen.svg" alt="Drag answer">
+								</figure>
+								<div class="card__text">
+									<h3 class="card__title">Match </h3>
+									<p class="card__description">(kitchen)</p>
+								</div>
+							</div>
+						</a>
+					</li>
+
+
+					<li class="card">
+						<a href="#" class="card__link">
+							<div class="card__items">
+								<figure class="card__icon">
+									<img src="../../../assets/images/icons/match/bedroom.svg" alt="Future Simple">
+								</figure>
+								<div class="card__text">
+									<h3 class="card__title">Match</h3>
+									<p class="card__description">(bedroom)</p>
+								</div>
+							</div>
+						</a>
+					</li>
+
 				</ul>
 			</section>
+
 		</div>
 	</main>
+
 </body>
 
 </html>

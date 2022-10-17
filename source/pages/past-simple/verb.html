@@ -6,7 +6,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="../../../css/style.css">
-	<script type="module" src="../../../source/js/verb-to-be-past.js"></script>
+	<script type="module" src="../../../source/js/write-the-words.js"></script>
 	<title>Verb 'to be'</title>
 </head>
 
@@ -30,6 +30,11 @@
 					<li class="header-menu__item"><a href="#" class="header-menu__link">Contact Us</a></li>
 				</ul>
 			</div>
+			<div class="amount amount--hide">
+				<span class="amount__mark">Score: 0</span>
+				<span class="amount__mistakes">Mistakes: 0</span>
+				<button class="amount__btn btn">Next Task</button>
+			</div>
 		</nav>
 	</header>
 
@@ -37,10 +42,10 @@
 		<div class="container">
 			<section class="levels">
 				<div class="levels__box"></div>
-				<div class="levels__info">
-					<h2 class="levels__title">Виберіть рівень та завдання для практики</h2>
+				<!-- <div class="levels__info">
+					<h2 class="levels__title">Виберіть завдання для практики</h2>
 					<p class="levels_description"></p>
-				</div>
+				</div> -->
 				<div class="levels__toggle toggle">
 					<div class="toggle__beginer">
 						<a href="../../../index.html">Beginner</a>
@@ -53,12 +58,7 @@
 					</div>
 				</div>
 				<section id="verbs-example" class="task ">
-					<div class="amount">
-						<span class="amount__mark">Score: 0</span>
-						<span class="amount__mistakes">Mistakes: 0</span>
-						<button class="amount__btn btn">Next Task</button>
-					</div>
-					<div class="card">
+					<div class="card js-arrPast">
 						<div class="card__items">
 							<figure class="card__icon">
 								<img src="../../../assets/images/icons/time/past-write.svg" alt="Verb to be">

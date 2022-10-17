@@ -19,7 +19,7 @@
 
 .match--grid {
   display: grid;
-  grid-template-columns: 0.5fr 1.5fr;
+  grid-template-columns: 1fr 1fr;
   grid-auto-rows: -webkit-max-content;
   grid-auto-rows: max-content;
   grid-gap: 5vh;
@@ -37,16 +37,13 @@
 
 .js-correct {
   cursor: pointer;
-  transform: scale(1);
 }
 .js-correct:active {
   background-color: #535353;
-  transform: scale(0.95);
-  transition: transform 0.3s;
 }
 
 @media (min-width: 760px) {
   .grid3fr {
-    grid-template-columns: 0.5fr 1.5fr;
+    grid-template-columns: 1fr 1fr;
   }
 }/*# sourceMappingURL=find-match.css.map */

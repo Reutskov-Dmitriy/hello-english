@@ -30,6 +30,11 @@
 					<li class="header-menu__item"><a href="#" class="header-menu__link">Contact Us</a></li>
 				</ul>
 			</div>
+			<div class="amount amount--hide">
+				<span class="amount__mark">Score: 0</span>
+				<span class="amount__mistakes">Mistakes: 0</span>
+				<button class="amount__btn btn">Next Task</button>
+			</div>
 		</nav>
 	</header>
 
@@ -37,10 +42,10 @@
 		<div class="container">
 			<section class="levels">
 				<div class="levels__box"></div>
-				<div class="levels__info">
-					<h2 class="levels__title">Виберіть рівень та завдання для практики</h2>
+				<!-- <div class="levels__info">
+					<h2 class="levels__title">Виберіть завдання для практики</h2>
 					<p class="levels_description"></p>
-				</div>
+				</div> -->
 				<div class="levels__toggle toggle">
 					<div class="toggle__beginer">
 						<a href="../../../index.html">Beginner</a>
@@ -53,12 +58,7 @@
 					</div>
 				</div>
 				<ul id="js-cardList" class="cards-list card-list--grid">
-					<div class="amount">
-						<span class="amount__mark">Score: 0</span>
-						<span class="amount__mistakes">Mistakes: 0</span>
-						<button class="amount__btn btn">Next Task</button>
-					</div>
-					<li class="card flex--column">
+					<li class="card flex--column js-phrasesPresentMatch">
 						<div class="card__items">
 							<!-- <figure class="card__icon">
 								<img src="../../../assets/images/icons/time/puzzle_icon.svg" alt="drag the words">
@@ -67,7 +67,6 @@
 								<h3 class="card__title card__title--align">Match a word with its definition</h3>
 								<p class="card__description card__description--align"></p>
 							</div>
-							<!-- <button id="button-start" class="btn btn__start">Start</button> -->
 						</div>
 
 						<section class="match match--grid grid3fr">

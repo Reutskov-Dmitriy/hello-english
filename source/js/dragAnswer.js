@@ -9,6 +9,9 @@ import { allowDragAndDrop, draggedAnswer, emptyField } from './module/function-d
 import concatString from './module/function-concat-sting.js';
 import deleteQuestion from "./module/fun-delete-question.js";
 import deleteAnswer from "./module/fun-delete-answer.js";
+import { correctOptionsPresent } from "./module/phrases-present-simple.js";
+import { phrasesPictureBathroom } from "./module/phrases-for-pictures.js";
+
 
 
 const btnCheck = document.querySelector('.card__btn');
@@ -17,8 +20,26 @@ const btnStart = document.querySelector('.btn__start');
 const containerCheck = document.querySelector('.card__check')
 const answersList = document.querySelector('.js-answers');
 const ulField = document.querySelector('.js-question');
-const chunks = getRandomChunks(toBePastArr, 2);
+const card = document.querySelector('.card')
+let chunks
 let index = 0;
+
+// The function selects an array with tasks
+addArr(card)
+function addArr(elem) {
+	if (elem.classList.contains('js-arrPresent')) {
+		chunks = getRandomChunks(correctOptionsPresent, 10);
+	}
+	else if (elem.classList.contains('js-arrFuture')) {
+		chunks = getRandomChunks(formVerbFuture, 10);
+	}
+	else if (elem.classList.contains('js-arrPast')) {
+		chunks = getRandomChunks(toBePastArr, 10);
+	}
+	else if (elem.classList.contains('js-prases_batheroom')) {
+		chunks = getRandomChunks(phrasesPictureBathroom, 10);
+	}
+}
 
 
 btnStart.onclick = startTask;
