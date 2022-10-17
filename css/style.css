@@ -343,7 +343,6 @@ body {
   font-family: "Open Sans", sans-serif;
   color: #252525;
   font-weight: 400;
-  width: 100vw;
   overflow-x: hidden;
 }
 
@@ -461,25 +460,25 @@ h3 {
 }
 
 .logo__title {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
   width: 100%;
   height: auto;
   font-family: "Monoton";
   color: #fff;
 }
 .logo__title a {
-  box-shadow: 0 0 15px rgb(92, 247, 125);
+  box-shadow: 0 0 15px #535353;
   border-radius: 20px;
   width: 100%;
   height: 100%;
-  color: #fff;
+  background-color: #fff;
+  color: #535353;
   padding: 1vw;
 }
-.logo__title a:hover {
-  transform: translate(23px, 12px);
+.logo__title--position {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 .logo__title--size {
   font-size: 1.3rem;
@@ -491,7 +490,6 @@ h3 {
   }
 }
 main {
-  height: 100%;
   width: 100%;
 }
 
@@ -623,10 +621,28 @@ main {
     grid-gap: 5vh;
   }
   .levels {
+    height: 100vh;
     gap: 3vh;
   }
   .levels__box {
     width: 100vw;
     height: 50px;
   }
+}
+.footer {
+  position: relative;
+  width: 100%;
+  height: 30vh;
+  background: url(../../assets/images/sky-blue-footer.png) 0 0/cover no-repeat;
+}
+.footer__column {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.footer__copyright {
+  margin-top: 40px;
 }/*# sourceMappingURL=style.css.map */

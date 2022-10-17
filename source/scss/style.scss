@@ -10,7 +10,6 @@ body {
 	font-family: $ff-os;
 	color: $black;
 	font-weight: 400;
-	width: 100vw;
 	overflow-x: hidden;
 }
 .container {
@@ -149,25 +148,28 @@ h3 {
 }
 .logo {
 	&__title {
-		position: absolute;
-		left: 50%;
-		top: 50%;
-		transform: translate(-50%, -50%);
 		width: 100%;
 		height: auto;
 		font-family: $ff-mon;
 		color: $white;
 		& a {
-			box-shadow: 0 0 15px $salat;
+			box-shadow: 0 0 15px $darkGrey;
 			border-radius: 20px;
 			width: 100%;
 			height: 100%;
-			color: $white;
+			background-color: $white;
+			color: $darkGrey;
 			padding: 1vw;
 			&:hover {
-				transform: translate(23px, 12px);
+				// transform: translate(23px, 12px);
 			}
 		}
+	}
+	&__title--position {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
 	}
 
 	&__title--size {
@@ -184,7 +186,7 @@ h3 {
 // MAIN
 // SECTION LEVELS
 main {
-	height: 100%;
+	// height: 100%;
 	width: 100%;
 }
 .levels {
@@ -342,10 +344,49 @@ main {
 		grid-gap: 5vh;
 	}
 	.levels {
+		height: 100vh;
 		gap: 3vh;
 		&__box {
 			width: 100vw;
 			height: 50px;
 		}
+	}
+}
+
+// Footer
+
+.footer {
+	position: relative;
+	width: 100%;
+	height: 30vh;
+	// color: #ffffff;
+	background: url(../../assets/images/sky-blue-footer.png) 0 0 / cover no-repeat;
+	// &::before {
+	// 	content: "";
+	// 	width: 100vw;
+	// 	height: 30vh;
+	// 	&:hover {
+	// 		&::after {
+	// 			background: linear-gradient(251.06deg, rgb(126, 90, 255, 0) 42.19%, rgb(85, 183, 255, 0) 80.21%);
+	// 	}
+	// 	background: linear-gradient(251.06deg, rgb(126, 90, 255, 0.55) 42.19%, rgb(85, 183, 255, 0.46) 80.21%);
+
+	// 	position: absolute;
+	// 	z-index: 1;
+	// }
+	&__column {
+		width: 100%;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&__logo {
+	}
+
+	&__copyright {
+		margin-top: 40px;
 	}
 }
