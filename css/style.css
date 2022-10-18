@@ -360,6 +360,21 @@ h3 {
   font-size: 1.2rem;
 }
 
+.main-header {
+  width: 100%;
+  height: 100vh;
+}
+.main-header::after {
+  content: "";
+  background: url(../../assets/images/view-famous-tower-bridge-sunrise-london.jpg) 0 0/cover no-repeat;
+  width: 100%;
+  height: 100%;
+  opacity: 0.3;
+}
+.block__image img {
+  opacity: 0.3;
+}
+
 .header {
   position: fixed;
   min-width: 100%;
@@ -460,8 +475,11 @@ h3 {
 }
 
 .logo__title {
-  width: 100%;
-  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 40px;
   font-family: "Monoton";
   color: #fff;
 }
@@ -469,10 +487,11 @@ h3 {
   box-shadow: 0 0 15px #535353;
   border-radius: 20px;
   width: 100%;
-  height: 100%;
+  height: auto;
   background-color: #fff;
   color: #535353;
-  padding: 1vw;
+  padding: 5px;
+  text-align: center;
 }
 .logo__title a:hover {
   box-shadow: 0 0 35px #535353;
@@ -492,7 +511,6 @@ h3 {
     height: 80px;
   }
   .header-menu__container {
-    position: fixed;
     top: 0;
     left: 30%;
     right: 20%;
@@ -511,6 +529,9 @@ h3 {
     align-items: center;
     gap: 4vh;
     line-height: 1.25rem;
+  }
+  .header-menu__btn {
+    display: none;
   }
   .header-menu__logo {
     width: 30vw;
@@ -729,4 +750,13 @@ main {
 .social li a {
   width: 100%;
   height: 100%;
+}
+
+@media (min-width: 760px) {
+  .footer {
+    color: #fff;
+  }
+  .social li {
+    border: 1px solid #fff;
+  }
 }/*# sourceMappingURL=style.css.map */
