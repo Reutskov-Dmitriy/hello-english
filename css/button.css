@@ -2,10 +2,10 @@
   transition: 1s;
   border: 1px solid rgb(0, 149, 243);
   border-radius: 10px;
-  color: #fff;
+  color: rgb(255, 255, 255);
 }
 .btn:hover, .btn:active, .btn:focus {
-  color: #fff;
+  color: rgb(255, 255, 255);
   background-color: #0f65aa;
 }
 
@@ -27,11 +27,11 @@
   height: 30px;
   border-radius: 10px;
   background-color: #e4e4e4;
-  color: #fff;
+  color: rgb(255, 255, 255);
   border: none;
 }
 .btn-next:hover, .btn-next:active, .btn-next:focus {
-  color: #fff;
+  color: rgb(255, 255, 255);
   background-color: #535353;
 }
 

@@ -67,10 +67,15 @@ function findElement() {
 
 }
 function toggleActive() {
-	this.classList.add('active-card');
 	if (!hasActiveCard) {
+		this.classList.add('active-card');
 		hasActiveCard = true;
 		firstCard = this
+		return
+	}
+	if (this.classList.contains('active-card') && firstCard) {
+		hasActiveCard = false;
+		this.classList.remove('active-card');
 		return
 	}
 	secondCard = this;
@@ -119,12 +124,10 @@ if (document.querySelector('.card__picture')) {
 	const picture = document.querySelector('.card__picture');
 	picture.onclick = function () {
 		if (!this.classList.contains('card__picture--scale')) {
-			// picture.classList.remove('card__picture--relative');
 			picture.classList.add('card__picture--scale');
 
 		} else {
 			picture.classList.remove('card__picture--scale');
-			// picture.classList.add('card__picture--relative');
 
 		}
 	}

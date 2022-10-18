@@ -30,7 +30,7 @@
   border: 1px solid rgb(0, 149, 243);
   border-radius: 10px;
   background-color: rgb(0, 149, 243);
-  color: #fff;
+  color: rgb(255, 255, 255);
   padding: 5px;
   cursor: move;
 }
