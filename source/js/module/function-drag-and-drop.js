@@ -2,8 +2,9 @@
 export { draggedAnswer, emptyField, allowDragAndDrop }
 const btnCheck = document.querySelector('.card__btn');
 const answersList = document.querySelector('.js-answers');
-let draggedAnswer
-let emptyField
+let draggedAnswer, emptyField, touch
+
+
 function allowDragAndDrop() {
 	const sells = document.querySelectorAll('.js-sell')
 	emptyField = document.querySelector('.drag__empty-field')
