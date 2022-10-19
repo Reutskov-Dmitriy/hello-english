@@ -5,8 +5,8 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="../../css/style.css">
-	<script type="module" src="../../source/js/write-the-words.js"></script>
+	<link rel="stylesheet" href="../../../css/style.css">
+	<script type="module" src="../../../source/js/dragAnswer.js"></script>
 	<title>Prepositions</title>
 </head>
 
@@ -14,7 +14,7 @@
 	<header class="header">
 		<nav class="header-menu">
 			<div class="header-menu__logo logo">
-				<h1 class="logo__title logo__title--position logo__title--size"><a href="../../index.html#home">Hello
+				<h1 class="logo__title logo__title--size logo__title--position"><a href="../../../index.html#home">Hello
 						English</a> </h1>
 			</div>
 			<input type="checkbox" id="checkbox" class="header-menu__checkbox" hidden>
@@ -25,11 +25,10 @@
 			</label>
 			<div class="header-menu__container">
 				<ul class="header-menu__items">
-					<li class="header-menu__item"><a href="../../../index.html#home" class="header-menu__link">Who We Are</a>
-					</li>
-					<li class="header-menu__item"><a href="../../index.html#section-levels" class="header-menu__link">Study
-							With Us</a>
-					</li>
+					<li class="header-menu__item"><a href="#../../../index.html#home" class="header-menu__link">Who We
+							Are</a></li>
+					<li class="header-menu__item"><a href="../../../index.html#section-levels"
+							class="header-menu__link">Study With Us</a></li>
 					<li class="header-menu__item"><a href="#" class="header-menu__link">Contact Us</a></li>
 				</ul>
 			</div>
@@ -45,45 +44,47 @@
 		<div class="container">
 			<section class="levels">
 				<div class="levels__box"></div>
-				<div class="levels__info">
-					<h2 class="levels__title">Виберіть завдання для практики</h2>
-					<p class="levels_description"></p>
-				</div>
 				<div class="levels__toggle toggle">
 					<div class="toggle__beginer">
 						<a href="../../../index.html">Beginner</a>
 					</div>
 					<div class="toggle__presentSimp">
-						<a href="../../../source/pages/present-simple/present-simple.html">Prepositions</a>
+						<a href="../../../source/pages/prepositions/prepositions.html">Prepositions</a>
 					</div>
 					<div class="toggle__advanced">
 						<a href="#"></a>
 					</div>
 				</div>
-				<section id="verbs-example" class="task ">
+				<ul class="cards-list">
 
-					<div class="card js-arrPrepositions">
+					<li class="card js-prases_batheroom">
 						<div class="card__items">
-							<figure class="card__icon">
-								<img src="../../assets/images/icons/time/like.svg" alt="Verb to be">
-							</figure>
 							<div class="card__text">
-								<h3 class="card__title card__title--align">Verb 'to be'</h3>
-								<p class="card__description card__description--align">Fill the gaps with the correct
-									prepositions of time ( in, on, at) :
+								<h3 class="card__title card__title--align">Drag and drop phrases and words
+								</h3>
+								<p class="card__description card__description--align">Complete the sentences with the correct
+									prepositions of place:
 								</p>
 							</div>
+							<button class="btn btn__start active">Start</button>
 						</div>
-					</div>
-
-					<ul class="cards-list"></ul>
-					<button id="inactive2" class="card__btn  btn">Check</button>
+						<figure class="card__picture">
+							<img src="../../../assets/images/bathroom.png" alt="bathroom">
+						</figure>
+						<section class="drag">
+							<div class="drag__question js-question ">
+							</div>
+							<div class="answers-list js-answers js-sell">
+							</div>
+						</section>
+					</li>
+					<button class="card__btn  btn inactive">Check</button>
 					<div class="card__check check">
 						<h3 class="check__title">Right!</h3>
 						<p class="check__answer"></p>
-						<button class=" btn-next ">Next</button>
+						<button class="check__btn btn-next ">Next</button>
 					</div>
-				</section>
+				</ul>
 
 			</section>
 		</div>

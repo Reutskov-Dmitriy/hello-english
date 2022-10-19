@@ -11,6 +11,7 @@ import deleteQuestion from "./module/fun-delete-question.js";
 import deleteAnswer from "./module/fun-delete-answer.js";
 import { correctOptionsPresent } from "./module/phrases-present-simple.js";
 import { phrasesPictureBathroom } from "./module/phrases-for-pictures.js";
+import { phrasesPrepositionsInterior } from "./module/phrases-prepositions.js";
 
 
 
@@ -30,8 +31,8 @@ function addArr(elem) {
 	if (elem.classList.contains('js-arrPresent')) {
 		chunks = getRandomChunks(correctOptionsPresent, 10);
 	}
-	else if (elem.classList.contains('js-arrFuture')) {
-		chunks = getRandomChunks(formVerbFuture, 10);
+	else if (elem.classList.contains('js-prases_interior')) {
+		chunks = getRandomChunks(phrasesPrepositionsInterior, 10);
 	}
 	else if (elem.classList.contains('js-arrPast')) {
 		chunks = getRandomChunks(toBePastArr, 10);
@@ -59,7 +60,6 @@ function startTask() {
 function changeQuestion() {
 	btnCheck.classList.remove('active');
 	btnCheck.classList.add('inactive');
-	// btnCheck.setAttribute('id', 'inactive1');
 	if (index < chunks[0].length) {
 		deleteQuestion(ulField, index);
 		deleteAnswer(answersList, index);

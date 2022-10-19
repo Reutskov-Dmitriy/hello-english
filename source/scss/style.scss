@@ -637,14 +637,3 @@ main {
 		}
 	}
 }
-
-@media (min-width: 760px) {
-	.footer {
-		color: $white;
-	}
-	.social {
-		& li {
-			border: 1px solid $white;
-		}
-	}
-}

@@ -1,4 +1,4 @@
-export { prepositionsArr };
+export { prepositionsArr, phrasesPrepositionsInterior };
 
 const prepositionsArr = [
 	{
@@ -106,3 +106,82 @@ const prepositionsArr = [
 		correctAnswer: ["in"]
 	},
 ]
+
+
+const phrasesPrepositionsInterior = [
+
+	{
+		questionBefore: ['There are chairs '],
+		questionAfter: [' the table. '],
+		correctAnswer: ['at'],
+		answerOptions: ['under', 'in', 'next to', 'above', 'between', 'to the right', 'on the right'],
+
+	},
+	{
+		questionBefore: ['There is a door '],
+		questionAfter: [" "],
+		correctAnswer: ["on the right"],
+		answerOptions: ['under', 'in', 'next to', 'above', 'between', 'to the right', 'on the right'],
+
+	},
+
+	{
+		questionBefore: ['There is a nightstand  '],
+		questionAfter: [' the armchair and the sofa. '],
+		correctAnswer: ['between'],
+		answerOptions: ['under', 'in', 'next to', 'above', 'between', 'to the right', 'on the right'],
+
+	},
+	{
+		questionBefore: ['There is a stool with a pot-plant '],
+		questionAfter: [' of the armchair.'],
+		correctAnswer: ['to the right '],
+		answerOptions: ['under', 'in', 'next to', 'above', 'between', 'to the right', 'on the right'],
+
+	},
+	{
+		questionBefore: ['There is a grey carpet '],
+		questionAfter: ['the center of the room.'],
+		correctAnswer: ['in'],
+		answerOptions: ['under', 'in', 'next to', 'above', 'between', 'to the right', 'on the right'],
+
+	},
+	{
+		questionBefore: ['There is a box '],
+		questionAfter: ['the ball.'],
+		correctAnswer: ['next to'],
+		answerOptions: ['under', 'in', 'next to', 'above', 'between', 'to the right', 'on the right'],
+
+	},
+
+	{
+		questionBefore: ['There is a blue notebook '],
+		questionAfter: [' the pen.'],
+		correctAnswer: ["under"],
+		answerOptions: ['under', 'in', 'next to', 'above', 'between', 'to the right', 'on the right'],
+
+	},
+	{
+		questionBefore: ['There is a guitar '],
+		questionAfter: ["of the box."],
+		correctAnswer: ["to the right"],
+		answerOptions: ['under', 'in', 'next to', 'above', 'between', 'to the right', 'on the right'],
+
+	},
+	{
+		questionBefore: ['There is a clock '],
+		questionAfter: ['the pictures.'],
+		correctAnswer: ['above'],
+		answerOptions: ['under', 'in', 'next to', 'above', 'between', 'to the right', 'on the right'],
+
+	},
+	{
+		questionBefore: ['There are pictures '],
+		questionAfter: [' the clock.'],
+		correctAnswer: ['under'],
+		answerOptions: ['under', 'in', 'next to', 'above', 'between', 'to the right', 'on the right'],
+	},
+
+
+]
+
