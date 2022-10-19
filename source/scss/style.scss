@@ -15,7 +15,7 @@ body {
 }
 .container {
 	min-width: 280px;
-	padding: 0 3vw;
+	padding: 1vh 3vw;
 	height: 100%;
 }
 a {
@@ -272,7 +272,6 @@ h2 {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	// height: 52.5vh;
 }
 
 .slick-list {
@@ -395,7 +394,6 @@ h2 {
 // MAIN
 // SECTION LEVELS
 main {
-	// height: 100%;
 	width: 100%;
 }
 .levels {
@@ -537,8 +535,6 @@ main {
 .wrapper-figure {
 	width: calc($index-size * $side-big);
 	height: calc($index-size * $side-small);
-
-	position: relative;
 }
 
 @media (min-width: 760px) {

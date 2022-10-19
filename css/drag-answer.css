@@ -15,7 +15,7 @@
 .drag__empty-field {
   display: inline-block;
   width: 100px;
-  height: 30px;
+  height: 44px;
   text-align: center;
   border: 1px solid rgb(0, 149, 243);
   border-radius: 10px;
@@ -33,6 +33,9 @@
   color: rgb(255, 255, 255);
   padding: 5px;
   cursor: move;
+}
+.drag__answer--position {
+  position: absolute;
 }
 
 .question__text {

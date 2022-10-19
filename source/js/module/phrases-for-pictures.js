@@ -1,4 +1,4 @@
-export { phrasesPictureBathroom, phrasesPictureKitchen };
+export { phrasesPictureBathroom, phrasesPictureKitchen, phrasesPictureBedroom };
 
 const phrasesPictureBathroom = [
 	{
@@ -118,6 +118,61 @@ const phrasesPictureKitchen = [
 	{
 		phrasesPiece1: 'There is a pepper grinder ',
 		phrasesPiece2: 'between the toaster and apples',
+		correctAnswer: '10',
+	},
+]
+
+
+const phrasesPictureBedroom = [
+	{
+		phrasesPiece1: 'There is a toy car  ',
+		phrasesPiece2: ' near the bed',
+		correctAnswer: '1',
+	},
+	{
+		phrasesPiece1: 'There are some pillows ',
+		phrasesPiece2: 'on the bed',
+		correctAnswer: '2',
+	},
+
+	{
+		phrasesPiece1: 'There is a big picture  ',
+		phrasesPiece2: 'above the bed',
+		correctAnswer: '3',
+	},
+	{
+		phrasesPiece1: 'There are purple curtains  ',
+		phrasesPiece2: ' on the window',
+		correctAnswer: '4',
+	},
+	{
+		phrasesPiece1: 'There is a wardrobe ',
+		phrasesPiece2: "to the left of the bed.",
+		correctAnswer: "5",
+	},
+	{
+		phrasesPiece1: 'We can see a ball ',
+		phrasesPiece2: 'on the carpet.',
+		correctAnswer: '6',
+	},
+	{
+		phrasesPiece1: 'There is a basketball hoop  ',
+		phrasesPiece2: 'on the right',
+		correctAnswer: '7',
+	},
+	{
+		phrasesPiece1: 'We can see a bed ',
+		phrasesPiece2: 'in the corner of the room',
+		correctAnswer: '8',
+	},
+	{
+		phrasesPiece1: 'There is a blue lamp ',
+		phrasesPiece2: ' on the bedside table.',
+		correctAnswer: '9',
+	},
+	{
+		phrasesPiece1: 'There is a small chair ',
+		phrasesPiece2: 'to the left of the bedside table.',
 		correctAnswer: '10',
 	},
 ]

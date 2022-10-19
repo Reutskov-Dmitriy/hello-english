@@ -201,7 +201,7 @@ h6 {
 .drag__empty-field {
   display: inline-block;
   width: 100px;
-  height: 30px;
+  height: 44px;
   text-align: center;
   border: 1px solid rgb(0, 149, 243);
   border-radius: 10px;
@@ -219,6 +219,9 @@ h6 {
   color: rgb(255, 255, 255);
   padding: 5px;
   cursor: move;
+}
+.drag__answer--position {
+  position: absolute;
 }
 
 .question__text {
@@ -298,7 +301,7 @@ h6 {
 
 .match__phrases, .match__answers {
   border: 1px solid rgb(0, 149, 243);
-  background-color: #f8d87e;
+  background-color: #f5ccf7;
 }
 .match__field {
   border: 1px solid #0f65aa;
@@ -349,7 +352,7 @@ body {
 
 .container {
   min-width: 280px;
-  padding: 0 3vw;
+  padding: 1vh 3vw;
   height: 100%;
 }
 
@@ -791,7 +794,6 @@ main {
 .wrapper-figure {
   width: calc((1vw + 1vh) * 30);
   height: calc((1vw + 1vh) * 20);
-  position: relative;
 }
 
 @media (min-width: 760px) {

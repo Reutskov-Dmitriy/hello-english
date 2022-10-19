@@ -18,7 +18,7 @@
 	&__empty-field {
 		display: inline-block;
 		width: 100px;
-		height: 30px;
+		height: 44px;
 		text-align: center;
 		border: 1px solid $sky;
 		border-radius: 10px;
@@ -37,6 +37,9 @@
 		color: $white;
 		padding: 5px;
 		cursor: move;
+	}
+	&__answer--position {
+		position: absolute;
 	}
 }
 .question {

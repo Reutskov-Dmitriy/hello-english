@@ -3,7 +3,7 @@
 import { addAnswer } from "./module/fun-render-answer.js";
 import getRandomChunks from "./module/fun-get-random-chunks.js";
 import { phrasesPresentArr } from "./module/phrases-match-present.js";
-import { phrasesPictureKitchen } from "./module/phrases-for-pictures.js";
+import { phrasesPictureKitchen, phrasesPictureBedroom } from "./module/phrases-for-pictures.js";
 
 
 const wordsList = document.querySelector('.js-answers');
@@ -27,8 +27,10 @@ function addArr(elem) {
 		chunks = getRandomChunks(phrasesPresentArr, 14);
 		chunks2 = getRandomChunks(phrasesPresentArr, 14);
 	}
-	else if (elem.classList.contains('js-arrFuture')) {
-		chunks = getRandomChunks(formVerbFuture, 10);
+	else if (elem.classList.contains('js-prases_bedroom')) {
+		chunks = getRandomChunks(phrasesPictureBedroom, 10);
+		chunks2 = getRandomChunks(phrasesPictureBedroom, 10);
+
 	}
 	else if (elem.classList.contains('js-arrPast')) {
 		chunks = getRandomChunks(toBePastArr, 10);
