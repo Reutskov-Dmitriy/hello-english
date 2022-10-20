@@ -5,6 +5,7 @@
 @import "drag-answer";
 @import "find-match";
 @import "vars";
+@import "contacts";
 
 body {
 	font-family: $ff-os;
@@ -397,6 +398,7 @@ h2 {
 // SECTION LEVELS
 main {
 	width: 100%;
+	// height: 100%;
 }
 .levels {
 	display: flex;
@@ -501,7 +503,7 @@ main {
 	&__picture {
 		margin: 2vh auto;
 		width: calc($index-size * $side-big);
-		height: calc($index-size * $side-small);
+		height: auto;
 		& img {
 			width: 100%;
 			height: auto;
