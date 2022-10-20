@@ -4,6 +4,9 @@
   gap: 5vh;
 }
 
+.match {
+  padding: 1vw;
+}
 .match__phrases, .match__answers {
   border: 1px solid rgb(0, 149, 243);
   background-color: #f5ccf7;
