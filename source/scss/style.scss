@@ -59,7 +59,6 @@ h2 {
 	&__block {
 		display: flex;
 		flex-direction: column;
-		// justify-content: center;
 		align-items: center;
 		gap: 5vh;
 	}
@@ -102,7 +101,7 @@ h2 {
 
 .header {
 	position: fixed;
-
+	z-index: 999;
 	min-width: 100%;
 	height: 60px;
 	background-color: $sky;
@@ -310,33 +309,56 @@ h2 {
 		& button {
 			width: 15px;
 			height: 15px;
-			border: 1px solid #ffffff;
+			border: 1px solid $sky;
 			background-color: transparent;
 			border-radius: 50%;
 			font-size: 0;
+			transition: 0.5s;
+			&:hover {
+				cursor: pointer;
+				box-shadow: 0 0 20px $salat;
+				background-color: $white;
+			}
 		}
 	}
 }
 
 //button next page
 .next-page {
-	margin-top: 10vh;
+	margin-top: 7vh;
 	width: 40px;
 	height: 40px;
-	border: 1px solid #ffffff;
 	border-radius: 50%;
+	color: $lightsky;
 	& a {
-		font-family: $ff-m;
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		width: 100%;
 		height: 100%;
-		border: 1px solid #ffffff;
+		border: 1px solid $blue;
+		background-color: $whiteOpacity;
 		border-radius: 50%;
-		cursor: pointer;
-		&::before {
-			content: url(../assets/images/icons/arrow-bottom.svg);
+		transition: 0.6s;
+
+		._icon-chevron-down {
+			position: relative;
+			&::before {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+			}
+		}
+
+		// &::before {
+		// 	content: url(../assets/images/icons/arrow-bottom.svg);
+		// }
+		&:hover {
+			cursor: pointer;
+			box-shadow: 0 0 15px $salat;
+			background-color: $white;
+			color: $blue;
 		}
 	}
 }
@@ -486,6 +508,7 @@ main {
 	height: 100%;
 	border: 1px solid $sky;
 	border-radius: 10px;
+	background-color: $whiteOpacity;
 	transition: 0.5s;
 	&:hover {
 		box-shadow: 0 0 15px $salat;

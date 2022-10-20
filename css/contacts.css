@@ -23,12 +23,20 @@
   justify-content: space-around;
   align-items: center;
   text-align: center;
-  background-color: rgba(255, 255, 255, 0.4);
+  background-color: rgba(255, 255, 255, 0.7);
 }
 .contact__mail {
   width: 60vw;
   height: auto;
   font-size: calc((1vw + 1vh) * 1.7);
+}
+.contact__mail a {
+  border-radius: 10%;
+  transition: 0.7;
+}
+.contact__mail a:hover {
+  background-color: rgb(255, 255, 255);
+  color: #55b7ff;
 }
 .contact__social {
   width: auto;
