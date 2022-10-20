@@ -7,7 +7,7 @@
 }
 .drag__question {
   width: 100%;
-  min-height: 150px;
+  min-height: 130px;
   padding: 3vw;
   text-align: justify;
   background-color: rgba(108, 195, 253, 0.3);

@@ -3,7 +3,7 @@
 import { addAnswer } from "./module/fun-render-answer.js";
 import getRandomChunks from "./module/fun-get-random-chunks.js";
 import { phrasesPresentArr } from "./module/phrases-match-present.js";
-import { phrasesPictureKitchen, phrasesPictureBedroom } from "./module/phrases-for-pictures.js";
+import { phrasesPictureKitchen, phrasesPictureBedroom, phrasesPictureMap } from "./module/phrases-for-pictures.js";
 
 
 const wordsList = document.querySelector('.js-answers');
@@ -38,6 +38,11 @@ function addArr(elem) {
 	else if (elem.classList.contains('js-prases_kitchen')) {
 		chunks = getRandomChunks(phrasesPictureKitchen, 10);
 		chunks2 = getRandomChunks(phrasesPictureKitchen, 10);
+
+	}
+	else if (elem.classList.contains('js-prases_map')) {
+		chunks = getRandomChunks(phrasesPictureMap, 10);
+		chunks2 = getRandomChunks(phrasesPictureMap, 10);
 
 	}
 }

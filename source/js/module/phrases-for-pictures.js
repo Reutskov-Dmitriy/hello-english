@@ -1,4 +1,4 @@
-export { phrasesPictureBathroom, phrasesPictureKitchen, phrasesPictureBedroom };
+export { phrasesPictureBathroom, phrasesPictureKitchen, phrasesPictureBedroom, phrasesPictureMap };
 
 const phrasesPictureBathroom = [
 	{
@@ -173,6 +173,60 @@ const phrasesPictureBedroom = [
 	{
 		phrasesPiece1: 'There is a small chair ',
 		phrasesPiece2: 'to the left of the bedside table.',
+		correctAnswer: '10',
+	},
+]
+
+const phrasesPictureMap = [
+	{
+		phrasesPiece1: 'There is the police station ',
+		phrasesPiece2: ' next to the hospital',
+		correctAnswer: '1',
+	},
+	{
+		phrasesPiece1: 'We can see a garden  ',
+		phrasesPiece2: 'behind the school',
+		correctAnswer: '2',
+	},
+
+	{
+		phrasesPiece1: 'There is a trolleybus ',
+		phrasesPiece2: 'at the crossroad',
+		correctAnswer: '3',
+	},
+	{
+		phrasesPiece1: 'There is a roundabout ',
+		phrasesPiece2: ' in the center of the city.',
+		correctAnswer: '4',
+	},
+	{
+		phrasesPiece1: 'We can see a kindergarten ',
+		phrasesPiece2: "in front of the market.",
+		correctAnswer: "5",
+	},
+	{
+		phrasesPiece1: 'The taxi is driving ',
+		phrasesPiece2: 'past the hotel.',
+		correctAnswer: '6',
+	},
+	{
+		phrasesPiece1: 'The ice-cream shop ',
+		phrasesPiece2: 'is near the pool',
+		correctAnswer: '7',
+	},
+	{
+		phrasesPiece1: 'The truck is driving ',
+		phrasesPiece2: 'at the roundabout',
+		correctAnswer: '8',
+	},
+	{
+		phrasesPiece1: 'The gym ',
+		phrasesPiece2: ' is in front of the high-rise.',
+		correctAnswer: '9',
+	},
+	{
+		phrasesPiece1: 'The police car ',
+		phrasesPiece2: 'is turning right.',
 		correctAnswer: '10',
 	},
 ]

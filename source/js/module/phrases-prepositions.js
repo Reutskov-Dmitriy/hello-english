@@ -15,12 +15,12 @@ const prepositionsArr = [
 	{
 		questionBefore: ['Her birthday is '],
 		questionAfter: [' 4th of July. '],
-		correctAnswer: ['On']
+		correctAnswer: ['on']
 	},
 	{
 		questionBefore: [' '],
 		questionAfter: [' autumn we celebrate Halloween'],
-		correctAnswer: ['In']
+		correctAnswer: ['in']
 	},
 	{
 		questionBefore: ['Lots of people give and receive presents  '],
@@ -36,7 +36,7 @@ const prepositionsArr = [
 	{
 		questionBefore: ['  '],
 		questionAfter: [' midnight I usually sleep.'],
-		correctAnswer: ["At"]
+		correctAnswer: ["at"]
 	},
 	{
 		questionBefore: ['My friend likes to run  '],

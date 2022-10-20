@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../../../css/style.css">
+	<script type="module" src="../../../source/js/find-match.js"></script>
+	<title>Find a match</title>
+</head>
+
+<body>
+	<header class="header">
+		<nav class="header-menu">
+			<div class="header-menu__logo logo">
+				<h1 class="logo__title logo__title--position logo__title--size"><a href="../../../index.html#home">Hello
+						English</a> </h1>
+			</div>
+			<input type="checkbox" id="checkbox" class="header-menu__checkbox" hidden>
+			<label for="checkbox" class="header-menu__btn">
+				<div class="header-menu__icon">
+					<span></span>
+				</div>
+			</label>
+			<div class="header-menu__container">
+				<ul class="header-menu__items">
+					<li class="header-menu__item"><a href="../../../index.html#home" class="header-menu__link">Who We Are</a>
+					</li>
+					<li class="header-menu__item"><a href="../../../index.html#section-levels"
+							class="header-menu__link">Study With Us</a></li>
+					<li class="header-menu__item"><a href="#" class="header-menu__link">Contact Us</a></li>
+				</ul>
+			</div>
+			<div class="amount amount--hide">
+				<span class="amount__mark">Score: 0</span>
+				<span class="amount__mistakes">Mistakes: 0</span>
+				<button class="amount__btn btn">Next Task</button>
+			</div>
+		</nav>
+	</header>
+
+	<main>
+		<div class="container">
+			<section class="levels">
+				<div class="levels__box"></div>
+				<div class="levels__toggle toggle">
+					<div class="toggle__beginer">
+						<a href="../../../index.html">Beginner</a>
+					</div>
+					<div class="toggle__presentSimp">
+						<a href="../../pages/matching/matching.html">Matching</a>
+					</div>
+					<div class="toggle">
+						<a href="#"></a>
+					</div>
+				</div>
+				<ul id="js-cardList" class="cards-list card-list--grid">
+					<li class="card flex--column js-prases_map">
+						<div class="card__items">
+							<div class="wrapper-figure">
+								<figure class="card__picture ">
+									<img src="../../../assets/images/map4.png" alt="map">
+								</figure>
+							</div>
+							<div class="card__text">
+								<h3 class="card__title card__title--align">Match the beginnings of the sentences with
+									theirendings.
+								</h3>
+								<p class="card__description card__description--align"></p>
+							</div>
+						</div>
+
+						<section class="match match--grid grid3fr">
+							<div class="match__answers answers-list js-answers">
+							</div>
+
+							<div class="match__phrases answers-list js-phrases"></div>
+						</section>
+					</li>
+					<button id="inactive2" class="card__btn  btn">Check</button>
+					<div class="card__check check">
+						<h3 class="check__title">Right!</h3>
+						<button class="check__btn btn-next ">Next</button>
+					</div>
+				</ul>
+			</section>
+		</div>
+	</main>
+</body>
+
+</html>
