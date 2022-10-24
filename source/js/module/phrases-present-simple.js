@@ -86,64 +86,64 @@ const correctOptionsPresent = [
 	{
 		questionBefore: ['My dad '],
 		questionAfter: [' a mechanic. '],
-		answerOptions: ['Were', 'works', 'can', 'should'],
+		answerOptions: ['were', 'works', 'can', 'should'],
 		correctAnswer: ['works']
 	},
 
 	{
 		questionBefore: ['Tom and Mark '],
 		questionAfter: [' well.'],
-		answerOptions: ['Plays', 'Runs', 'Sing ', 'Is cooking'],
+		answerOptions: ['plays', 'runs', 'sing ', 'is cooking'],
 		correctAnswer: ['Sing ']
 	},
 
 	{
 		questionBefore: ['I '],
 		questionAfter: [' become an artist.'],
-		answerOptions: ["Doesn't want to", "Don't want", 'Want', "Don't want to"],
-		correctAnswer: ["Don't want to"]
+		answerOptions: ["doesn't want to", "don't want", 'want', "don't want to"],
+		correctAnswer: ["don't want to"]
 	},
 
 	{
 		questionBefore: ['My granny  '],
 		questionAfter: ['eggs for breakfast. '],
-		answerOptions: ['Fry', 'Frys', 'Fries ', 'Is friing'],
+		answerOptions: ['fry', 'frys', 'fries ', 'is friing'],
 		correctAnswer: ['Fries']
 	},
 
 	{
 		questionBefore: ['He  '],
 		questionAfter: [' tall boy.'],
-		answerOptions: ['Is a ', 'Is an', 'Is', "isn't"],
-		correctAnswer: ['Is a ']
+		answerOptions: ['is a ', 'is an', 'is', "isn't"],
+		correctAnswer: ['is a ']
 	},
 
 	{
 		questionBefore: ['Those mice  '],
 		questionAfter: [' small. '],
-		answerOptions: ['Is', 'Am', "Aren't ", 'Are a'],
-		correctAnswer: ["Aren't "]
+		answerOptions: ['is', 'am', "aren't ", 'are a'],
+		correctAnswer: ["aren't "]
 	},
 
 	{
 		questionBefore: ['You have to clean your  '],
 		questionAfter: [' every day.'],
-		answerOptions: ['Tooth', 'Teethes', 'Toothes', 'Teeth '],
-		correctAnswer: ['Teeth ']
+		answerOptions: ['tooth', 'teethes', 'toothes', 'teeth '],
+		correctAnswer: ['teeth ']
 	},
 
 	{
 		questionBefore: ['Those '],
 		questionAfter: [' nice people.'],
-		answerOptions: ['Is', 'Are a', 'Are  ', 'Was'],
-		correctAnswer: ['Are']
+		answerOptions: ['is', 'are a', 'are  ', 'was'],
+		correctAnswer: ['are']
 	},
 
 	{
 		questionBefore: ['He can  '],
 		questionAfter: [' the piano well. '],
-		answerOptions: ['Play  ', 'To play', 'Playing', 'plays'],
-		correctAnswer: ['Play ']
+		answerOptions: ['play  ', 'to play', 'playing', 'plays'],
+		correctAnswer: ['play ']
 	},
 ]
 
