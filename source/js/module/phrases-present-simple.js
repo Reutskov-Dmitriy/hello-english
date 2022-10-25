@@ -94,7 +94,7 @@ const correctOptionsPresent = [
 		questionBefore: ['Tom and Mark '],
 		questionAfter: [' well.'],
 		answerOptions: ['plays', 'runs', 'sing ', 'is cooking'],
-		correctAnswer: ['Sing ']
+		correctAnswer: ['sing ']
 	},
 
 	{
@@ -108,7 +108,7 @@ const correctOptionsPresent = [
 		questionBefore: ['My granny  '],
 		questionAfter: ['eggs for breakfast. '],
 		answerOptions: ['fry', 'frys', 'fries ', 'is friing'],
-		correctAnswer: ['Fries']
+		correctAnswer: ['fries']
 	},
 
 	{

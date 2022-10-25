@@ -82,7 +82,6 @@ function allowDragAndDrop() {
 	}
 }
 
-console.log(container.getBoundingClientRect())
 //Function to check the coordinates of two elements
 function checkCoordinates(elem) {
 	if (

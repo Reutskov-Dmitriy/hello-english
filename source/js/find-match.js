@@ -21,8 +21,8 @@ let mistakes = 0;
 
 
 
-addArr(card)
-function addArr(elem) {
+selectArr(card)
+function selectArr(elem) {
 	if (elem.classList.contains('js-phrasesPresentMatch')) {
 		chunks = getRandomChunks(phrasesPresentArr, 14);
 		chunks2 = getRandomChunks(phrasesPresentArr, 14);

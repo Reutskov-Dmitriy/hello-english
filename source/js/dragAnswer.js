@@ -26,8 +26,8 @@ let chunks
 let index = 0;
 
 // The function selects an array with tasks
-addArr(card)
-function addArr(elem) {
+selectArr(card)
+function selectArr(elem) {
 	if (elem.classList.contains('js-arrPresent')) {
 		chunks = getRandomChunks(correctOptionsPresent, 10);
 	}

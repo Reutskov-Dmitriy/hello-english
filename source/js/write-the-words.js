@@ -22,8 +22,8 @@ let index = 0;
 
 
 // The function selects an array with tasks
-arrCards.forEach((elem) => { addArr(elem) })
-function addArr(elem) {
+arrCards.forEach((elem) => { selectArr(elem) })
+function selectArr(elem) {
 	if (elem.classList.contains('js-arrPresent')) {
 		chunks = getRandomChunks(verbToBePresent, 10);
 	}

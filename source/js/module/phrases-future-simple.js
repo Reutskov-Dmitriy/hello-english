@@ -4,44 +4,44 @@ const formVerbFuture = [
 	{
 		questionBefore: ['Mary  '],
 		questionAfter: [' happy to see you tomorrow. '],
-		correctAnswer: ['Will be']
+		correctAnswer: ['will be']
 	},
 	{
 		questionBefore: ['Your friends  '],
 		questionAfter: [" happy to go for a picnic because it's going to rain soon."],
-		correctAnswer: ["Won't be"]
+		correctAnswer: ["won't be"]
 	},
 
 	{
 		questionBefore: ['I '],
 		questionAfter: [' strong and fit, because I do physical exercises in the morning.'],
-		correctAnswer: ['Will be']
+		correctAnswer: ['will be']
 	},
 	{
 		questionBefore: ['Ann '],
 		questionAfter: [' so excited about this trip!'],
-		correctAnswer: ['Will be']
+		correctAnswer: ['will be']
 	},
 	{
 		questionBefore: ['Tom  '],
 		questionAfter: [' interested in reading this book. He likes such stories.'],
-		correctAnswer: ['Will be']
+		correctAnswer: ['will be']
 	},
 	{
 		questionBefore: ['Our mom  '],
 		questionAfter: [" angry, she doesn't like when we do this."],
-		correctAnswer: ['Will be']
+		correctAnswer: ['will be']
 	},
 
 	{
 		questionBefore: ['My sisters '],
 		questionAfter: [' singers. They want to become dancers.'],
-		correctAnswer: ["Won't be"]
+		correctAnswer: ["won't be"]
 	},
 	{
 		questionBefore: ['Mark '],
 		questionAfter: ["a good student at this school because he doesn't like it."],
-		correctAnswer: ["Won't be"]
+		correctAnswer: ["won't be"]
 	},
 	{
 		questionBefore: ['Kate '],
@@ -51,7 +51,7 @@ const formVerbFuture = [
 	{
 		questionBefore: ['My parents  '],
 		questionAfter: [' live with us next month.'],
-		correctAnswer: ['Will']
+		correctAnswer: ['will']
 	},
 
 ]

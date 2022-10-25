@@ -39,6 +39,7 @@
 }
 
 .question__text {
+  display: flex;
   line-height: 2rem;
 }
 
