@@ -12,6 +12,7 @@ import deleteAnswer from "./module/fun-delete-answer.js";
 import { correctOptionsPresent } from "./module/phrases-present-simple.js";
 import { phrasesPictureBathroom } from "./module/phrases-for-pictures.js";
 import { phrasesPrepositionsInterior } from "./module/phrases-prepositions.js";
+import { phrasesDragFuture } from "./module/phrases-future-simple.js";
 
 
 
@@ -36,6 +37,9 @@ function selectArr(elem) {
 	}
 	else if (elem.classList.contains('js-arrPast')) {
 		chunks = getRandomChunks(toBePastArr, 10);
+	}
+	else if (elem.classList.contains('js-arrFuture')) {
+		chunks = getRandomChunks(phrasesDragFuture, 10);
 	}
 	else if (elem.classList.contains('js-prases_batheroom')) {
 		chunks = getRandomChunks(phrasesPictureBathroom, 10);

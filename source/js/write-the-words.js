@@ -1,6 +1,6 @@
 'use strict'
 // import { workArr } from "./add-arr.js";
-import { formVerbFuture } from "./module/phrases-future-simple.js";
+import { phrasesVerbFuture } from "./module/phrases-future-simple.js";
 import { prepositionsArr } from "./module/phrases-prepositions.js";
 import { toBePastArr, formVerbPast } from "./module/phrases-past-simple.js";
 import { verbToBePresent, correctOptionsPresent } from "./module/phrases-present-simple.js";
@@ -28,7 +28,7 @@ function selectArr(elem) {
 		chunks = getRandomChunks(verbToBePresent, 10);
 	}
 	else if (elem.classList.contains('js-arrFuture')) {
-		chunks = getRandomChunks(formVerbFuture, 10);
+		chunks = getRandomChunks(phrasesVerbFuture, 10);
 	}
 	else if (elem.classList.contains('js-arrPast')) {
 		chunks = getRandomChunks(formVerbPast, 10);
