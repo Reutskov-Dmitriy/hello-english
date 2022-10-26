@@ -225,7 +225,6 @@ h6 {
 }
 
 .question__text {
-  text-align: justify;
   line-height: 2rem;
 }
 
@@ -909,6 +908,7 @@ main {
 }
 .footer__copyright {
   align-self: flex-end;
+  font-size: 0.68rem;
 }
 
 .social {

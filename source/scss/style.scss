@@ -595,9 +595,6 @@ main {
 		align-items: center;
 	}
 
-	&__logo {
-	}
-
 	&__row {
 		width: 100%;
 		height: 5vh;
@@ -608,6 +605,7 @@ main {
 
 	&__copyright {
 		align-self: flex-end;
+		font-size: 0.68rem;
 	}
 }
 .social {
