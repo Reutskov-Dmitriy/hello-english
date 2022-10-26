@@ -30,6 +30,19 @@ class ComponentHeader extends HTMLElement {
 
 customElements.define('component-header', ComponentHeader);
 
+//HTML CONTAINER AMOUNT
+class ComponentAmount extends HTMLElement {
+	connectedCallback() {
+		this.innerHTML = `
+		<div class="amount amount--hide">
+		<span class="amount__mark">Score: 0</span>
+		<span class="amount__mistakes">Mistakes: 0</span>
+	</div>
+`
+	}
+}
+customElements.define('component-amount', ComponentAmount);
+
 //HTML FOOTER
 class ComponentFooter extends HTMLElement {
 	connectedCallback() {
@@ -54,3 +67,4 @@ class ComponentFooter extends HTMLElement {
 }
 
 customElements.define('component-footer', ComponentFooter);
+
