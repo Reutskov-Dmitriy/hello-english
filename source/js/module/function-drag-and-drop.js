@@ -74,7 +74,6 @@ function allowDragAndDrop() {
 		this.classList.add('drag__answer--position');
 		this.style.top = `${touch.pageY - container.offsetTop - (this.offsetHeight / 2)}px`;
 		this.style.left = `${touch.pageX - container.offsetLeft - (this.offsetWidth / 2)}px`;
-
 		sells.forEach((sell) => {
 			checkCoordinates(sell);
 		})
@@ -103,6 +102,7 @@ function touchDrop() {
 		elemAppend.classList.remove('active-card')
 		this.style.top = `${elemAppend.offsetTop}px`;
 		this.style.left = `${elemAppend.offsetLeft}px`;
+		this.classList.remove('drag__answer--position');
 		this.setAttribute('id', 'check-answer')
 		btnCheck.classList.remove('inactive');
 		btnCheck.classList.add('active');

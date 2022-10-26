@@ -225,7 +225,7 @@ h6 {
 }
 
 .question__text {
-  display: flex;
+  text-align: justify;
   line-height: 2rem;
 }
 
