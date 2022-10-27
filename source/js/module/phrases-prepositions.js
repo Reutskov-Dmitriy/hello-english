@@ -113,7 +113,7 @@ const phrasesPrepositionsInterior = [
 	{
 		questionBefore: ['There are chairs '],
 		questionAfter: [' the table. '],
-		correctAnswer: ['at'],
+		correctAnswer: ['next to'],
 		answerOptions: ['under', 'in', 'next to', 'above', 'between', 'to the right', 'on the right'],
 
 	},

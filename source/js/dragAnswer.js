@@ -4,7 +4,7 @@ import { renderAnswers } from "./module/fun-render-answer.js";
 import { toBePastArr } from './module/phrases-past-simple.js';
 import getRandomChunks from "./module/fun-get-random-chunks.js";
 
-import { amountDiv, markSpan, mistakesSpan, mark, mistakes, changeAmount } from "./module/changeAmount.js";
+import { amountDiv, changeAmount } from "./module/changeAmount.js";
 import { allowDragAndDrop, draggedAnswer, emptyField } from './module/function-drag-and-drop.js';
 import concatString from './module/function-concat-sting.js';
 import deleteQuestion from "./module/fun-delete-question.js";
@@ -13,6 +13,7 @@ import { correctOptionsPresent } from "./module/phrases-present-simple.js";
 import { phrasesPictureBathroom } from "./module/phrases-for-pictures.js";
 import { phrasesPrepositionsInterior } from "./module/phrases-prepositions.js";
 import { phrasesDragFuture } from "./module/phrases-future-simple.js";
+import scalePicture from "./module/fun-scalePicture.js";
 
 
 
@@ -25,6 +26,8 @@ const ulField = document.querySelector('.js-question');
 const card = document.querySelector('.card')
 let chunks
 let index = 0;
+
+scalePicture(); // zoom function
 
 // The function selects an array with tasks
 selectArr(card)
@@ -85,6 +88,7 @@ function checkInsertedAttribute() {
 	changeAmount(resultBoolean, chunks[0][index], 'questionBefore', 'questionAfter', 'correctAnswer')
 	index++;
 }
+
 
 
 

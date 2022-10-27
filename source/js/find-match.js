@@ -4,6 +4,8 @@ import { addAnswer } from "./module/fun-render-answer.js";
 import getRandomChunks from "./module/fun-get-random-chunks.js";
 import { phrasesPresentArr } from "./module/phrases-match-present.js";
 import { phrasesPictureKitchen, phrasesPictureBedroom, phrasesPictureMap } from "./module/phrases-for-pictures.js";
+import scalePicture from "./module/fun-scalePicture.js";
+
 
 
 const wordsList = document.querySelector('.js-answers');
@@ -19,7 +21,9 @@ let index = 0;
 let mark = 0;
 let mistakes = 0;
 
+scalePicture(); // zoom function
 
+// The function selects an array with tasks
 
 selectArr(card)
 function selectArr(elem) {
@@ -32,9 +36,7 @@ function selectArr(elem) {
 		chunks2 = getRandomChunks(phrasesPictureBedroom, 10);
 
 	}
-	else if (elem.classList.contains('js-arrPast')) {
-		chunks = getRandomChunks(toBePastArr, 10);
-	}
+
 	else if (elem.classList.contains('js-prases_kitchen')) {
 		chunks = getRandomChunks(phrasesPictureKitchen, 10);
 		chunks2 = getRandomChunks(phrasesPictureKitchen, 10);
@@ -67,12 +69,10 @@ function renderTask() {
 
 
 function findElement() {
-
 	correct = document.querySelectorAll('.js-correct');
 	correct.forEach(elem => elem.addEventListener('click', toggleActive));
-
-
 }
+//Function makes the card active/inactive
 function toggleActive() {
 	if (!hasActiveCard) {
 		this.classList.add('active-card');
@@ -80,7 +80,7 @@ function toggleActive() {
 		firstCard = this
 		return
 	}
-	if (this.classList.contains('active-card') && firstCard) {
+	else if (this.classList.contains('active-card')) {
 		hasActiveCard = false;
 		this.classList.remove('active-card');
 		return
@@ -127,18 +127,6 @@ function removeElements(elem) {
 }
 
 
-if (document.querySelector('.card__picture')) {
-	const picture = document.querySelector('.card__picture');
-	picture.onclick = function () {
-		if (!this.classList.contains('card__picture--scale')) {
-			picture.classList.add('card__picture--scale');
 
-		} else {
-			picture.classList.remove('card__picture--scale');
-
-		}
-	}
-
-}
 
 

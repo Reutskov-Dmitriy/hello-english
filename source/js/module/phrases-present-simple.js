@@ -86,8 +86,8 @@ const correctOptionsPresent = [
 	{
 		questionBefore: ['My dad '],
 		questionAfter: [' a mechanic. '],
-		answerOptions: ['were', 'works', 'can', 'should'],
-		correctAnswer: ['works']
+		answerOptions: ['were', 'will', "isn't", 'works'],
+		correctAnswer: ["isn't"]
 	},
 
 	{

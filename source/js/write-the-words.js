@@ -1,12 +1,11 @@
 'use strict'
-// import { workArr } from "./add-arr.js";
 import { phrasesVerbFuture } from "./module/phrases-future-simple.js";
 import { prepositionsArr } from "./module/phrases-prepositions.js";
-import { toBePastArr, formVerbPast } from "./module/phrases-past-simple.js";
-import { verbToBePresent, correctOptionsPresent } from "./module/phrases-present-simple.js";
+import { formVerbPast } from "./module/phrases-past-simple.js";
+import { verbToBePresent } from "./module/phrases-present-simple.js";
 import { addQuestion } from "./module/fun-render-question.js";
 import getRandomChunks from "./module/fun-get-random-chunks.js";
-import { amountDiv, markSpan, mistakesSpan, mark, mistakes, changeAmount } from "./module/changeAmount.js";
+import { amountDiv, changeAmount } from "./module/changeAmount.js";
 import concatString from "./module/function-concat-sting.js";
 import deleteQuestion from "./module/fun-delete-question.js";
 
