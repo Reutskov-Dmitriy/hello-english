@@ -7,10 +7,6 @@
   align-items: center;
   background: radial-gradient(circle, rgb(63, 94, 251) 0%, rgba(216, 70, 252, 0.7091211485) 100%);
 }
-.contact::after {
-  content: "";
-  background: url(../../assets/images/);
-}
 .contact__title {
   font-size: calc((1vw + 1vh) * 2.3);
 }
