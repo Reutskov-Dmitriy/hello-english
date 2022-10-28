@@ -16,10 +16,10 @@ class ComponentHeader extends HTMLElement {
 			</label>
 			<div class="header-menu__container">
 				<ul class="header-menu__items">
-					<li class="header-menu__item"><a href="../../../index.html#home" class="header-menu__link"> Home</a></li>
-					<li class="header-menu__item"><a href="../../../index.html#section-levels" class="header-menu__link">Study With Us</a>
+					<li class="header-menu__item"><a href="/hello-english/index.html#home" class="header-menu__link"> Home</a></li>
+					<li class="header-menu__item"><a href="/hello-english/index.html#section-levels" class="header-menu__link">Study With Us</a>
 					</li>
-					<li class="header-menu__item"><a href="../../../source/pages/contacts.html" class="header-menu__link">Contact
+					<li class="header-menu__item"><a href="/hello-english/source/pages/contacts.html" class="header-menu__link">Contact
 							Us</a></li>
 				</ul>
 			</div>
@@ -50,7 +50,7 @@ class ComponentFooter extends HTMLElement {
 			<footer class="footer">
 				<div class="footer__column">
 					<div class="footer__logo logo">
-						<h1 class="logo__title logo__title--size"><a href="/reutskov-dmitriy.github.io/index.html#home">Hello English</a> </h1>
+						<h1 class="logo__title logo__title--size"><a href="/hello-english/index.html#home">Hello English</a> </h1>
 					</div>
 					<div class="footer__row">
 						<div class="footer__copyright">Copyrights © 2022 HelloEnglish</div>
