@@ -5,7 +5,7 @@ class ComponentHeader extends HTMLElement {
 		<header class="header">
 		<nav class="header-menu">
 			<div class="header-menu__logo logo">
-				<h1 class="logo__title logo__title--position logo__title--size"><a href="../../../index.html#home">Hello English</a>
+				<h1 class="logo__title logo__title--position logo__title--size"><a href="/hello-english/index.html#home">Hello English</a>
 				</h1>
 			</div>
 			<input type="checkbox" id="checkbox" class="header-menu__checkbox" hidden>
@@ -55,9 +55,9 @@ class ComponentFooter extends HTMLElement {
 					<div class="footer__row">
 						<div class="footer__copyright">Copyrights © 2022 HelloEnglish</div>
 						<ul class="footer__social social">
-							<li class="social__icon _icon-facebook"><a href="#"></a></li>
-							<li class="_icon-twitter"><a href="#"></a></li>
-							<li class="_icon-instagram"><a href="#"></a></li>
+							<li class="social__icon _icon-facebook"><a href="https://www.facebook.com/"></a></li>
+							<li class="_icon-twitter"><a href="https://twitter.com/"></a></li>
+							<li class="_icon-instagram"><a href="https://www.instagram.com/"></a></li>
 						</ul>
 					</div>
 
