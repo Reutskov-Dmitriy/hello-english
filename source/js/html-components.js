@@ -55,9 +55,9 @@ class ComponentFooter extends HTMLElement {
 					<div class="footer__row">
 						<div class="footer__copyright">Copyrights © 2022 HelloEnglish</div>
 						<ul class="footer__social social">
-							<li class="social__icon _icon-facebook"><a href="https://www.facebook.com/"></a></li>
-							<li class="_icon-twitter"><a href="https://twitter.com/"></a></li>
-							<li class="_icon-instagram"><a href="https://www.instagram.com/"></a></li>
+							<li class="social__icon "><a class="_icon-facebook" href="https://www.facebook.com/"></a></li>
+							<li class="social__icon "><a class="_icon-twitter" href="https://twitter.com/"></a></li>
+							<li class="social__icon "><a class="_icon-instagram" href="https://www.instagram.com/"></a></li>
 						</ul>
 					</div>
 

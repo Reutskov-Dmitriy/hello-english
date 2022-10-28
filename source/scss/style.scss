@@ -284,6 +284,7 @@ h2 {
 	cursor: pointer;
 	width: 80vw;
 	&__item {
+		padding: 0 2vw;
 		text-align: center;
 	}
 	&__title {
@@ -645,17 +646,21 @@ main {
 		height: 40px;
 		border: 1px solid $darkGrey;
 		border-radius: 50%;
-		transition: 1s;
+		transition: 0.7s;
 		&:hover {
 			cursor: pointer;
 			border: 1px solid $lightsky;
-			color: $lightsky;
 			background-color: $white;
 		}
 
 		& a {
+			display: inline-block;
 			width: 100%;
 			height: 100%;
+			transition: 0.7s;
+			&:hover {
+				color: $lightsky;
+			}
 		}
 	}
 }
