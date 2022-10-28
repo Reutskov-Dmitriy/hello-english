@@ -50,7 +50,7 @@ class ComponentFooter extends HTMLElement {
 			<footer class="footer">
 				<div class="footer__column">
 					<div class="footer__logo logo">
-						<h1 class="logo__title logo__title--size"><a href="/index.html#home">Hello English</a> </h1>
+						<h1 class="logo__title logo__title--size"><a href="/reutskov-dmitriy.github.io/index.html#home">Hello English</a> </h1>
 					</div>
 					<div class="footer__row">
 						<div class="footer__copyright">Copyrights © 2022 HelloEnglish</div>
