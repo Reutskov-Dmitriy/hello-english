@@ -1,8 +1,8 @@
 'use strict'
-import { phrasesVerbFuture } from "./module/phrases-future-simple.js";
-import { prepositionsArr } from "./module/phrases-prepositions.js";
-import { formVerbPast } from "./module/phrases-past-simple.js";
-import { verbToBePresent } from "./module/phrases-present-simple.js";
+import { phrasesVerbFuture } from "./module/phrases/phrases-future-simple.js";
+import { prepositionsArr } from "./module/phrases/phrases-prepositions.js";
+import { formVerbPast } from "./module/phrases/phrases-past-simple.js";
+import { verbToBePresent } from "./module/phrases/phrases-present-simple.js";
 import { addQuestion } from "./module/fun-render-question.js";
 import getRandomChunks from "./module/fun-get-random-chunks.js";
 import { amountDiv, changeAmount } from "./module/changeAmount.js";

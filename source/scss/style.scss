@@ -1,11 +1,11 @@
-@import "reset";
-@import "fonts";
-@import "verb-to-be";
-@import "button";
-@import "drag-answer";
-@import "find-match";
-@import "vars";
-@import "contacts";
+@import "_reset";
+@import "_fonts";
+@import "_verb-to-be";
+@import "_button";
+@import "_drag-answer";
+@import "_find-match";
+@import "_vars";
+@import "_contacts";
 
 body {
 	font-family: $ff-os;

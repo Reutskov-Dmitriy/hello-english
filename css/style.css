@@ -98,7 +98,7 @@ h6 {
 
 .amount {
   width: 50vw;
-  height: 25vh;
+  height: 25 vh;
   position: fixed;
   z-index: 1;
   border-radius: 10px;
@@ -355,10 +355,6 @@ h6 {
   align-items: center;
   background: radial-gradient(circle, rgb(63, 94, 251) 0%, rgba(216, 70, 252, 0.7091211485) 100%);
 }
-.contact::after {
-  content: "";
-  background: url(../../assets/images/);
-}
 .contact__title {
   font-size: calc((1vw + 1vh) * 2.3);
 }
@@ -379,8 +375,8 @@ h6 {
   font-size: calc((1vw + 1vh) * 1.7);
 }
 .contact__mail a {
-  border-radius: 10%;
-  transition: 0.7;
+  border-radius: 11%;
+  transition: 0.7s;
 }
 .contact__mail a:hover {
   background-color: rgb(255, 255, 255);

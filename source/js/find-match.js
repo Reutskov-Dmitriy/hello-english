@@ -2,8 +2,8 @@
 
 import { addAnswer } from "./module/fun-render-answer.js";
 import getRandomChunks from "./module/fun-get-random-chunks.js";
-import { phrasesPresentArr } from "./module/phrases-match-present.js";
-import { phrasesPictureKitchen, phrasesPictureBedroom, phrasesPictureMap } from "./module/phrases-for-pictures.js";
+import { phrasesPresentArr } from "./module/phrases/phrases-match-present.js";
+import { phrasesPictureKitchen, phrasesPictureBedroom, phrasesPictureMap } from "./module/phrases/phrases-for-pictures.js";
 import scalePicture from "./module/fun-scalePicture.js";
 
 

@@ -1,7 +1,7 @@
 'use strict'
 import { renderQuestions } from "./module/fun-render-question.js";
 import { renderAnswers } from "./module/fun-render-answer.js";
-import { toBePastArr } from './module/phrases-past-simple.js';
+import { toBePastArr } from './module/phrases/phrases-past-simple.js';
 import getRandomChunks from "./module/fun-get-random-chunks.js";
 
 import { amountDiv, changeAmount } from "./module/changeAmount.js";
@@ -9,10 +9,10 @@ import { allowDragAndDrop, draggedAnswer, emptyField } from './module/function-d
 import concatString from './module/function-concat-sting.js';
 import deleteQuestion from "./module/fun-delete-question.js";
 import deleteAnswer from "./module/fun-delete-answer.js";
-import { correctOptionsPresent } from "./module/phrases-present-simple.js";
-import { phrasesPictureBathroom } from "./module/phrases-for-pictures.js";
-import { phrasesPrepositionsInterior } from "./module/phrases-prepositions.js";
-import { phrasesDragFuture } from "./module/phrases-future-simple.js";
+import { correctOptionsPresent } from "./module/phrases/phrases-present-simple.js";
+import { phrasesPictureBathroom } from "./module/phrases/phrases-for-pictures.js";
+import { phrasesPrepositionsInterior } from "./module/phrases/phrases-prepositions.js";
+import { phrasesDragFuture } from "./module/phrases/phrases-future-simple.js";
 import scalePicture from "./module/fun-scalePicture.js";
 
 
