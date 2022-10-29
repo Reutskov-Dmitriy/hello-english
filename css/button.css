@@ -1,0 +1,44 @@
+.btn {
+  transition: 1s;
+  border: 1px solid rgb(0, 149, 243);
+  border-radius: 10px;
+  color: rgb(255, 255, 255);
+}
+.btn:hover, .btn:active, .btn:focus {
+  color: rgb(255, 255, 255);
+  background-color: #0f65aa;
+}
+
+#inactive1,
+#inactive2,
+.inactive {
+  pointer-events: none;
+  background-color: #e4e4e4;
+}
+
+#active,
+.active {
+  pointer-events: all;
+  background-color: rgb(0, 149, 243);
+}
+
+.btn-next {
+  width: 200px;
+  height: 30px;
+  border-radius: 10px;
+  background-color: #e4e4e4;
+  color: rgb(255, 255, 255);
+  border: none;
+}
+.btn-next:hover, .btn-next:active, .btn-next:focus {
+  color: rgb(255, 255, 255);
+  background-color: #535353;
+}
+
+.btn-scale {
+  transform: scale(1);
+}
+.btn-scale:active {
+  transform: scale(0.95);
+  transition: transform 0.3s;
+}/*# sourceMappingURL=button.css.map */

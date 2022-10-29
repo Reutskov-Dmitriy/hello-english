@@ -1,0 +1,109 @@
+.drag {
+  display: flex;
+  flex-direction: column;
+  min-width: 80vw;
+  height: auto;
+  padding: 5px 0;
+}
+.drag__question {
+  width: 100%;
+  min-height: 130px;
+  padding: 3vw;
+  text-align: justify;
+  background-color: rgba(108, 195, 253, 0.3);
+}
+.drag__empty-field {
+  display: inline-block;
+  width: 100px;
+  height: 44px;
+  text-align: center;
+  border: 1px solid rgb(0, 149, 243);
+  border-radius: 10px;
+}
+.drag__answer {
+  min-width: 100px;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border: 1px solid rgb(0, 149, 243);
+  border-radius: 10px;
+  background-color: rgb(0, 149, 243);
+  color: rgb(255, 255, 255);
+  padding: 5px;
+  cursor: move;
+}
+.drag__answer--position {
+  position: absolute;
+}
+
+.question__text {
+  line-height: 2rem;
+}
+
+.answers-list {
+  padding: 1vw;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2vw;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgb(0, 149, 243);
+}
+
+.answer__text {
+  height: auto;
+}
+
+.hide {
+  display: none;
+}
+
+.stuck {
+  background-color: #e4e4e4;
+}
+
+.amount__btn {
+  width: 100px;
+  height: 30px;
+  background-color: rgb(0, 149, 243);
+}
+
+.btn__start {
+  width: 50px;
+  height: 30px;
+}
+
+.card__btn {
+  margin: 0 auto;
+  width: 200px;
+  height: 30px;
+  margin-bottom: 3vh;
+}
+
+.check {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 30vh;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  right: 0;
+  bottom: -30vh;
+  padding: 1vh;
+}
+
+#right {
+  background-color: rgb(196, 248, 207);
+  color: rgb(70, 199, 98);
+}
+
+#wrong {
+  background-color: rgb(235, 130, 130);
+  color: #fd0909;
+}/*# sourceMappingURL=drag-answer.css.map */

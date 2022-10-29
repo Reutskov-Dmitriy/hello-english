@@ -1,0 +1,51 @@
+@import "vars";
+
+.btn {
+	transition: 1s;
+	border: 1px solid $sky;
+	border-radius: 10px;
+	color: $white;
+
+	&:hover,
+	&:active,
+	&:focus {
+		color: $white;
+		background-color: $blue;
+	}
+}
+
+#inactive1,
+#inactive2,
+.inactive {
+	pointer-events: none;
+	background-color: $lightGray;
+}
+#active,
+.active {
+	pointer-events: all;
+	background-color: $sky;
+}
+
+.btn-next {
+	width: 200px;
+	height: 30px;
+	border-radius: 10px;
+	background-color: $lightGray;
+	color: $white;
+	border: none;
+	&:hover,
+	&:active,
+	&:focus {
+		color: $white;
+		background-color: $darkGrey;
+	}
+}
+
+.btn-scale {
+	transform: scale(1);
+
+	&:active {
+		transform: scale(0.95);
+		transition: transform 0.3s;
+	}
+}

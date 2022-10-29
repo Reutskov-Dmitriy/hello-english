@@ -1,0 +1,112 @@
+@import "vars";
+
+.drag {
+	display: flex;
+	flex-direction: column;
+	min-width: 80vw;
+	height: auto;
+	padding: 5px 0;
+
+	&__question {
+		width: 100%;
+		min-height: 130px;
+		padding: 3vw;
+		text-align: justify;
+		background-color: $skyOpasity;
+	}
+
+	&__empty-field {
+		display: inline-block;
+		width: 100px;
+		height: 44px;
+		text-align: center;
+		border: 1px solid $sky;
+		border-radius: 10px;
+	}
+
+	&__answer {
+		min-width: 100px;
+		height: auto;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		border: 1px solid $sky;
+		border-radius: 10px;
+		background-color: $sky;
+		color: $white;
+		padding: 5px;
+		cursor: move;
+	}
+	&__answer--position {
+		position: absolute;
+	}
+}
+.question {
+	&__text {
+		line-height: 2rem;
+	}
+}
+.answers-list {
+	padding: 1vw;
+	width: 100%;
+	height: auto;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 2vw;
+	justify-content: center;
+	align-items: center;
+	border: 1px solid $sky;
+}
+.answer {
+	&__text {
+		height: auto;
+	}
+}
+
+.hide {
+	display: none;
+}
+
+.stuck {
+	background-color: $lightGray;
+}
+
+.amount__btn {
+	width: 100px;
+	height: 30px;
+	background-color: $sky;
+}
+.btn__start {
+	width: 50px;
+	height: 30px;
+}
+.card__btn {
+	margin: 0 auto;
+	width: 200px;
+	height: 30px;
+	margin-bottom: 3vh;
+}
+
+.check {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	height: 30vh;
+	position: fixed;
+	z-index: 999;
+	left: 0;
+	right: 0;
+	bottom: -30vh;
+	padding: 1vh;
+}
+
+#right {
+	background-color: $lightsalat;
+	color: $darksalat;
+}
+#wrong {
+	background-color: $lightred;
+	color: $red;
+}

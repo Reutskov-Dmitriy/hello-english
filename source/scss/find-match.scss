@@ -1,0 +1,55 @@
+@import "vars";
+
+.flex--column {
+	display: flex;
+	flex-direction: column;
+	gap: 5vh;
+}
+
+.match {
+	padding: 1vw;
+	&__phrases,
+	&__answers {
+		border: 1px solid $sky;
+		background-color: $lightOrange;
+	}
+
+	&__field {
+		border: 1px solid $blue;
+		width: 100%;
+		min-height: 150px;
+		padding: 3vw;
+		text-align: justify;
+		background-color: $skyOpasity;
+	}
+}
+.match--grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-auto-rows: max-content;
+	grid-gap: 5vh;
+}
+
+.active-card {
+	background-color: $darkGrey;
+	box-shadow: 0 0 15px $salat;
+}
+
+.inactive-card {
+	background-color: $lightsalat;
+	pointer-events: none;
+}
+
+.js-correct {
+	cursor: pointer;
+
+	&:active {
+		background-color: $darkGrey;
+	}
+}
+
+@media (min-width: 760px) {
+	.grid3fr {
+		grid-template-columns: 1fr 1fr;
+	}
+}
